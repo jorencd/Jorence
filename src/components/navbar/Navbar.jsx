@@ -4,7 +4,21 @@ import "./Navbar.css";
 function Navbar() {
 
   return (
-    <div className="nav flex flex-row justify-around items-center py-2 px-4 w-3/4 sm:w-1/3 md:w-1/3 lg:w-1/3 rounded-full absolute top-8">
+    <div 
+    className="
+    nav 
+    flex 
+    flex-row 
+    justify-around 
+    items-center  
+    w-3/4 sm:w-1/2
+    md:w-2/5 lg:w-1/3 
+    rounded-full 
+    relative
+    md:px-6
+    md:gap-x-3
+    px-4
+    gap-x-4">
         <svg    
             xmlns="http://www.w3.org/2000/svg" 
             width="24"

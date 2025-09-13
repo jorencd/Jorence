@@ -1,12 +1,26 @@
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Hero from './components/section/Hero'
+import About from './components/section/About'
+import Skills from './components/section/Skills'
 
 function App() {
   return (
-    <div className="flex justify-center items-center px-10 sm:px-28 md:px-40 lg:px-56">
+    <div className="
+    flex 
+    flex-col
+    justify-center 
+    items-center 
+    px-10 
+    sm:px-28 
+    md:px-40 
+    lg:px-56
+    pt-10
+    gap-y-10">
       <Navbar />
       <Hero />
+      <About />
+      <Skills />
     </div>
   );
 }
