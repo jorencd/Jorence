@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar'
 import Hero from './components/section/Hero'
 import About from './components/section/About'
 import Skills from './components/section/Skills'
+import Project from './components/section/Project'
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
     pt-10
     gap-y-10">
       <Navbar />
-      <Hero />
+      <Hero className="z-0" />
       <About />
       <Skills />
+      <Project />
     </div>
   );
 }
