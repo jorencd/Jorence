@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Courses() {
   return (
@@ -12,11 +12,11 @@ function Courses() {
         My IT Learning Journey
       </h1>
       <p className="lg:text-xl lg:text-center font-light text-gray-700">
-        I’ve worked on a wide range of projects, from simple websites to complex
-        web applications. Here are a few of my favorites.
+        Here are some of the key courses I completed during my IT studies that
+        helped shape my skills and knowledge.
       </p>
     </div>
-  )
+  );
 }
 
-export default Courses
+export default Courses;
