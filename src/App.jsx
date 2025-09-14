@@ -19,7 +19,7 @@ function App() {
     pt-10
     gap-y-10">
       <Navbar />
-      <Hero className="z-0" />
+      <Hero />
       <About />
       <Skills />
       <Project />

@@ -1,8 +1,8 @@
-import React from 'react'
+import Projectcard from "../cards/projectCard/Projectcard"
 
 function Project() {
   return (
-    <div className="flex flex-col gap-y-2 lg:gap-y-4 lg:pt-6 pt-4 lg:justify-center lg:items-center">
+    <div className="flex flex-col gap-y-3 lg:gap-y-4 lg:pt-6 pt-4 lg:justify-center lg:items-center">
         <div className="">
             <p className="text-base lg:text-xl font-normal bg-black text-white inline px-3 py-1 rounded-xl">My Projects</p>
         </div>
@@ -14,6 +14,7 @@ function Project() {
             from simple websites to complex web applications. 
             Here are a few of my favorites.
         </p>
+        <Projectcard />
     </div>
   )
 }

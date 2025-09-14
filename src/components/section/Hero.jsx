@@ -6,7 +6,6 @@ function Hero() {
     <div 
     className="
       flex 
-      z-10
       flex-row 
       sm:gap-x-2 
       md:gap-x-4 
