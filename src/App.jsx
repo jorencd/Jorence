@@ -6,7 +6,9 @@ import Skills from "./components/section/Skills";
 import Project from "./components/section/Project";
 import Courses from "./components/section/Courses";
 import Contact from "./components/section/Contact";
+import Carousel from "./components/carousel/Carousel";
 import Footer from "./components/footer/Footer";
+
 import AnimateOnScroll from "./components/AnimateOnScroll";
 
 function App() {
@@ -17,7 +19,7 @@ function App() {
         flex 
         flex-col
         justify-center 
-        items-center 
+         
         px-10 
         sm:px-28 
         md:px-40 
@@ -28,6 +30,7 @@ function App() {
         <Navbar />
 
         <AnimateOnScroll><Hero /></AnimateOnScroll>
+        <AnimateOnScroll><Carousel /></AnimateOnScroll>
         <AnimateOnScroll delay={0.1}><About /></AnimateOnScroll>
         <AnimateOnScroll delay={0.2}><Skills /></AnimateOnScroll>
         <AnimateOnScroll delay={0.3}><Project /></AnimateOnScroll>

@@ -5,8 +5,7 @@ function Button() {
     <div className="flex flex-row gap-x-2">
         <button 
           className="
-            bg-black 
-            hover:bg-gray-800 
+            resume 
             px-7 
             py-2 
             text-xs 
@@ -19,7 +18,7 @@ function Button() {
         </button>
         <button 
         className="
-            contact 
+            contact
             px-7 
             py-2 
             text-xs 

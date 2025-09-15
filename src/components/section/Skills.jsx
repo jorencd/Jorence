@@ -1,5 +1,3 @@
-import React from "react";
-
 function Skills() {
   return (
     <div className="flex flex-col gap-y-2 w-full">

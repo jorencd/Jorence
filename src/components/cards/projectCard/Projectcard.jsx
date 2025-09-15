@@ -35,9 +35,7 @@ function Project() {
               designed to help individuals
             </p>
             <div>
-              <button className="text-xs lg:text-sm bg-black text-white px-4 py-2 rounded-full">
-                View Project
-              </button>
+              <a className="font-medium text-xs lg:text-sm" href="">View Project</a>
             </div>
           </div>
         </div>
@@ -67,9 +65,7 @@ function Project() {
               designed to help individuals
             </p>
             <div>
-              <button className="text-xs lg:text-sm bg-black text-white px-4 py-2 rounded-full">
-                View Project
-              </button>
+              <a className="font-medium text-xs lg:text-sm" href="">View Project</a>
             </div>
           </div>
         </div>
@@ -97,9 +93,7 @@ function Project() {
               designed to help individuals
             </p>
             <div>
-              <button className="text-xs lg:text-sm bg-black text-white px-4 py-2 rounded-full">
-                View Project
-              </button>
+              <a className="font-medium text-xs lg:text-sm" href="">View Project</a>
             </div>
           </div>
         </div>
