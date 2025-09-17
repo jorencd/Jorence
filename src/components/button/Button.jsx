@@ -7,7 +7,7 @@ function Button() {
           className="
             resume 
             px-7 
-            py-2 
+            py-1 
             text-xs 
             md:text-base 
             lg:text-base 
@@ -18,14 +18,15 @@ function Button() {
         </button>
         <button 
         className="
+            border
             contact
             px-7 
-            py-2 
+            py-1 
             text-xs 
             md:text-base 
             lg:text-base 
             rounded-full 
-            text-black"
+            text-gray-700"
         >
             Contact
         </button>

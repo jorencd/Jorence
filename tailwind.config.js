@@ -1,16 +1,13 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}", // scan React components
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: "#6366f1", // Indigo
+        primary: "#6366f1",   // Indigo
         secondary: "#ec4899", // Pink
       },
     },
   },
   plugins: [],
-}
+};

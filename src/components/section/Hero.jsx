@@ -17,7 +17,7 @@ function Hero() {
         <h1 className="text-3xl sm:text-3xl md:text-3xl lg:text-5xl font-bold ">
           Hi, I'm Jorence
         </h1>
-        <p className="lg:text-lg md:text-md text-gray-600">
+        <p className="lg:text-lg md:text-md text-gray-500">
           Web & Game Developer | Digital Artist. I love creating interactive worlds, building for the web, and bringing ideas to life.
         </p>
         <Button />
