@@ -12,7 +12,7 @@ function Projectcard({ image, gradient, title, description, link }) {
         />
         {/* Gradient overlay */}
         <img
-          className="absolute inset-0 w-full h-full object-cover rounded-l-lg lg:rounded-xl pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover rounded-xl lg:rounded-xl pointer-events-none"
           src={gradient}
           alt="gradient overlay"
         />
