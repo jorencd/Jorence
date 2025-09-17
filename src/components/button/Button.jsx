@@ -6,8 +6,9 @@ function Button() {
         <button 
           className="
             resume 
+            py-2
             px-7 
-            py-1 
+            lg:py-1 
             text-xs 
             md:text-base 
             lg:text-base 
@@ -20,8 +21,9 @@ function Button() {
         className="
             border
             contact
+            py-2
             px-7 
-            py-1 
+            lg:py-1 
             text-xs 
             md:text-base 
             lg:text-base 
