@@ -62,7 +62,7 @@ function Button({ darkMode, setDarkMode }) {
         </ul>
       </button>
       <button
-        className="border contact py-2 px-7 lg:py-1 text-xs md:text-base lg:text-base rounded-full"
+        className="border contact py-2 px-7 lg:py-1 text-base md:text-base lg:text-base rounded-full"
       >
         Rezamei
       </button>
