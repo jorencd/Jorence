@@ -8,8 +8,8 @@ function Carousel() {
       slidesPerView={1.75}
       breakpoints={{
         640: {
-          spaceBetween: 20,
-          slidesPerView: 3.5,
+          spaceBetween: 15,
+          slidesPerView: 2.5,
         },
         1024: {
           spaceBetween: 25,

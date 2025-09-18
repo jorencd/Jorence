@@ -13,7 +13,7 @@ function Project() {
     {
       image: picture1,
       gradient: gradientImage1,
-      title: "TaskFlow - Task Management Application",
+      title: "TaskFlow",
       description:
         "TaskFlow is a modern, user-friendly task management application designed to help individuals.",
       link: "#",
@@ -37,7 +37,7 @@ function Project() {
   ];
 
   return (
-    <div className="flex flex-col gap-y-3 lg:gap-y-4 lg:pt-6 pt-4 lg:justify-center lg:items-center">
+    <div className="flex flex-col gap-y-3 lg:gap-y-4 lg:pt-6 pt-4">
       <div>
         <p className="text-base lg:text-xl font-normal bg-black text-white inline px-3 py-1 rounded-xl">
           My Projects
@@ -46,13 +46,13 @@ function Project() {
       <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold">
         Check out my latest work
       </h1>
-      <p className="lg:text-xl lg:text-center font-light text-gray-500">
+      <p className="lg:text-xl font-light text-gray-500">
         I’ve worked on a wide range of projects, from simple websites to complex
         web applications. Here are a few of my favorites.
       </p>
 
       {/* ✅ Auto-loop projects */}
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-y-6 lg:gap-x-8 lg:flex-row lg:w-3/4">
+      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-y-6 lg:gap-x-14 lg:flex-row lg:w-full">
         {projects.map((project, index) => (
           <Projectcard key={index} {...project} />
         ))}

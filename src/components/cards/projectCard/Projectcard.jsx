@@ -1,36 +1,26 @@
 import "./Projectcard.css";
 
-function Projectcard({ image, gradient, title, description, link }) {
+function Projectcard({ image, title, description, link }) {
   return (
-    <div className="card flex flex-col gap-x-4 rounded-xl p-3 border border-black/20">
-      <div className="relative w-full">
-        {/* Base image */}
-        <img
-          className="w-full object-cover rounded-md lg:rounded-md"
-          src={image}
-          alt={title}
-        />
-        {/* Gradient overlay */}
-        <img
-          className="absolute inset-0 w-full h-full object-cover rounded-md lg:rounded-md pointer-events-none"
-          src={gradient}
-          alt="gradient overlay"
-        />
-      </div>
+    <div className="w-full lg:w-full bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+      {/* Image */}
+      <img
+        className="w-full h-40 object-cover rounded-t-lg"
+        src={image}
+        alt={title}
+      />
 
-      <div className="flex flex-col flex-grow py-2 pr-4">
-        <h1 className="font-medium text-sm lg:text-sm">{title}</h1>
-        <p className="desc text-gray-600 lg:text-sm font-light text-justify mb-2 mt-2">
-          {description}
-        </p>
-        {/* link pushed to bottom */}
-        <div className="flex flex-row justify-end mt-auto">
+      {/* Content */}
+      <div className="p-4">
+        <h2 className="text-xl font-semibold">{title}</h2>
+        <p className="text-gray-600 text-base">{description}</p>
 
+        <div className="flex justify-between items-center mt-4">
           <a
-            className="font-medium text-xs lg:text-xs underline"
             href={link}
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-[#0A2847] text-sm hover:bg-blue-600 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             View Project
           </a>
