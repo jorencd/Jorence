@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/section/Hero";
@@ -8,26 +9,24 @@ import Courses from "./components/section/Courses";
 import Contact from "./components/section/Contact";
 import Carousel from "./components/carousel/Carousel";
 import Footer from "./components/footer/Footer";
-
 import AnimateOnScroll from "./components/AnimateOnScroll";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Optional: remember user preference
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
-    <div className="flex flex-col">
-      <div
-        className="
-        flex 
-        flex-col
-        justify-center 
-         
-        px-10 
-        sm:px-28 
-        md:px-40 
-        lg:px-56
-        pt-10
-        gap-y-10"
-      >
-        <Navbar />
+    <div className={`flex flex-col min-h-screen ${darkMode ? "bg-gray-900 text-[#dfdfdf] border-white" : "bg-white text-[#2e2e2e]"}`}>
+      <div className="flex flex-col justify-center px-10 sm:px-28 md:px-40 lg:px-56 pt-10 gap-y-10">
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
         <AnimateOnScroll><Hero /></AnimateOnScroll>
         <AnimateOnScroll><Carousel /></AnimateOnScroll>
@@ -38,9 +37,7 @@ function App() {
         <AnimateOnScroll delay={0.5}><Contact /></AnimateOnScroll>
       </div>
 
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

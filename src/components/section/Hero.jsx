@@ -4,20 +4,12 @@ import Button from "../button/Button";
 
 function Hero() {
   return (
-    <div 
-    className="
-      flex 
-      flex-row 
-      sm:gap-x-2 
-      md:gap-x-4 
-      lg:gap-x-20
-      pt-20"
-    >
+    <div className="flex flex-row sm:gap-x-2 md:gap-x-4 lg:gap-x-20 pt-20">
       <div className="w-4/5 flex flex-col gap-y-2">
-        <h1 className="text-3xl sm:text-3xl md:text-3xl lg:text-5xl font-bold ">
+        <h1 className="text-3xl sm:text-3xl md:text-3xl lg:text-5xl font-bold">
           Hi, I'm Jorence
         </h1>
-        <p className="lg:text-lg md:text-md text-gray-500">
+        <p className="lg:text-lg md:text-m">
           Web & Game Developer | Digital Artist. I love creating interactive worlds, building for the web, and bringing ideas to life.
         </p>
         <Button />

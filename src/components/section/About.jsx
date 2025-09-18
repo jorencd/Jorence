@@ -6,7 +6,7 @@ function About() {
         <h1 className="text-xl lg:text-3xl font-semibold">
             About
         </h1>
-        <p className="lg:text-lg font-light text-gray-500">
+        <p className="lg:text-lg font-light">
             I’m Jorence Mendoza, a BSIT graduate majoring in Web and Game Development. 
             I’m passionate about creating interactive experiences—whether it’s building websites, 
             developing games, or exploring digital art. 

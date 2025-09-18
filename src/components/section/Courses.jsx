@@ -11,7 +11,7 @@ function Courses() {
       <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold">
         My IT Learning Journey
       </h1>
-      <p className="lg:text-xl font-light text-gray-700">
+      <p className="lg:text-xl font-light">
         Here are some of the key courses I completed during my IT studies that
         helped shape my skills and knowledge.
       </p>
