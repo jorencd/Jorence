@@ -7,7 +7,7 @@ import gradientImage1 from "../../assets/projectPictures/gradientblue.png";
 import gradientImage2 from "../../assets/projectPictures/Gradientvio.png";
 import gradientImage3 from "../../assets/projectPictures/gradientViolet.png";
 
-function Project() {
+function Project({ darkMode }) {
   // ✅ Project data array
   const projects = [
     {
@@ -39,20 +39,20 @@ function Project() {
   return (
     <div className="flex flex-col gap-y-3 lg:gap-y-4 lg:pt-6 pt-4">
       <div>
-        <p className="text-base lg:text-xl font-normal bg-black text-white inline px-3 py-1 rounded-xl">
+        <p className={`text-base lg:text-xl font-normal inline px-3 py-1 rounded-xl ${darkMode ? "bg-white text-black" : "bg-black text-white"}`}>
           My Projects
         </p>
       </div>
       <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold">
         Check out my latest work
       </h1>
-      <p className="lg:text-xl font-light text-gray-500">
+      <p className="lg:text-xl font-light">
         I’ve worked on a wide range of projects, from simple websites to complex
         web applications. Here are a few of my favorites.
       </p>
 
       {/* ✅ Auto-loop projects */}
-      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-y-6 lg:gap-x-14 lg:flex-row lg:w-full">
+      <div className="text-[#2e2e2e] flex flex-col lg:grid lg:grid-cols-3 gap-y-6 lg:gap-x-14 lg:flex-row lg:w-full">
         {projects.map((project, index) => (
           <Projectcard key={index} {...project} />
         ))}

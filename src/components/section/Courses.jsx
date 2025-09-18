@@ -1,11 +1,11 @@
 import React from "react";
 
-function Courses() {
+function Courses({ darkMode }) {
   return (
     <div className="flex flex-col gap-y-3 lg:gap-y-4 lg:pt-6 pt-4">
-      <div className="">
-        <p className="text-base lg:text-xl font-normal bg-black text-white inline px-3 py-1 rounded-xl">
-          Courses
+      <div>
+        <p className={`text-base lg:text-xl font-normal inline px-3 py-1 rounded-xl ${darkMode ? "bg-white text-black" : "bg-black text-white"}`}>
+          My Projects
         </p>
       </div>
       <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold">

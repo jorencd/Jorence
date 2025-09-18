@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="footer w-full relative bottom-0">
         <p className="text-center text-sm text-white py-1">
-          © 2023 My Website. All rights reserved.
+          © 2025 My Website. All rights reserved.
         </p>
       </div>
   );

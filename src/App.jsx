@@ -31,10 +31,10 @@ function App() {
         <AnimateOnScroll><Hero /></AnimateOnScroll>
         <AnimateOnScroll><Carousel /></AnimateOnScroll>
         <AnimateOnScroll delay={0.1}><About /></AnimateOnScroll>
-        <AnimateOnScroll delay={0.2}><Skills /></AnimateOnScroll>
-        <AnimateOnScroll delay={0.3}><Project /></AnimateOnScroll>
-        <AnimateOnScroll delay={0.4}><Courses /></AnimateOnScroll>
-        <AnimateOnScroll delay={0.5}><Contact /></AnimateOnScroll>
+        <AnimateOnScroll delay={0.2}><Skills darkMode={darkMode} /></AnimateOnScroll>
+        <AnimateOnScroll delay={0.3}><Project darkMode={darkMode} /></AnimateOnScroll>
+        <AnimateOnScroll delay={0.4}><Courses darkMode={darkMode} /></AnimateOnScroll>
+        <AnimateOnScroll delay={0.5}><Contact darkMode={darkMode} /></AnimateOnScroll>
       </div>
 
       <Footer />
