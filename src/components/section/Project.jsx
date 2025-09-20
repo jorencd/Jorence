@@ -14,24 +14,21 @@ function Project({ darkMode }) {
       image: picture1,
       gradient: gradientImage1,
       title: "TaskFlow",
-      description:
-        "TaskFlow is a modern, user-friendly task management application designed to help individuals.",
+      date: "November 22, 2023",
       link: "#",
     },
     {
       image: picture2,
       gradient: gradientImage2,
       title: "Finance Tracker",
-      description:
-        "A finance tracker app that allows users to monitor expenses and manage budgets with ease.",
+      date: "October 2, 2023",
       link: "#",
     },
     {
       image: picture3,
       gradient: gradientImage3,
       title: "Portfolio Website",
-      description:
-        "A personal portfolio showcasing skills, projects, and experiences with a clean UI design.",
+      date: "September 1, 2024",
       link: "#",
     },
   ];

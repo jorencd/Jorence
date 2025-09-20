@@ -24,7 +24,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className={`flex flex-col min-h-screen ${darkMode ? "bg-gray-900 text-[#dfdfdf] border-white" : "bg-white text-[#2e2e2e]"}`}>
+    <div className={`flex flex-col min-h-screen ${darkMode ? "bg-gray-900 text-[#dfdfdf] border-white" : "bg-[#f5f5f5] text-[#1f1f1f]"}`}>
       <div className="flex flex-col justify-center px-10 sm:px-28 md:px-40 lg:px-56 pt-10 gap-y-10">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
