@@ -1,10 +1,34 @@
 import React, { useState, useEffect } from "react";
 import "./Button.css";
+import ResumeDL from "../modal/ResumeDL";
 
 function Button({ darkMode, setDarkMode }) {
+  const [showModal, setShowModal] = useState(false);
+
+   const handleResumeClick = () => {
+    setShowModal(true);
+  };
+
+  // when user accepts in modal
+  const handleAccept = () => {
+    setShowModal(false);
+
+    // create hidden link to trigger download
+    const link = document.createElement("a");
+    link.href = "/Resume/Jorence_Mendoza_Resume.pdf";
+    link.download = "Jorence_Mendoza_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // when user declines in modal
+  const handleDecline = () => {
+    setShowModal(false);
+  };
   return (
     <div className="flex flex-row gap-x-2">
-      <button className="btn-cssbuttons py-2 px-7 lg:py-1">
+      <button className={`btn-cssbuttons py-2 px-7 lg:py-1`}>
         <span>Contact</span>
         <span></span>
         <ul>
@@ -61,11 +85,35 @@ function Button({ darkMode, setDarkMode }) {
           </li>
         </ul>
       </button>
+
       <button
-        className="border contact py-2 px-7 lg:py-1 text-base md:text-base lg:text-base rounded-full"
+        onClick={handleResumeClick}
+        className="bg-white shadow text-center w-35 rounded-2xl h-10 relative text-black text-sm font-semibold group"
+        type="button"
       >
-        Rezamei
+        <div
+          className="bg-[#E3B555] rounded-xl h-8 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[95%] group-focus:w-[95%] 
+       z-21 duration-500"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#000"
+              d="M12 15.248q-.161 0-.298-.053t-.267-.184l-2.62-2.619q-.146-.146-.152-.344t.152-.363q.166-.166.357-.169q.192-.003.357.163L11.5 13.65V5.5q0-.213.143-.357T12 5t.357.143t.143.357v8.15l1.971-1.971q.146-.146.347-.153t.366.159q.16.165.163.354t-.162.353l-2.62 2.62q-.13.13-.267.183q-.136.053-.298.053M6.616 19q-.691 0-1.153-.462T5 17.384v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-1.923q0-.213.143-.356t.357-.144t.357.144t.143.356v1.923q0 .691-.462 1.153T17.384 19z"
+            />
+          </svg>
+        </div>
+        <p className="translate-x-2 relative z-20">Resume</p>
       </button>
+
+      {/* Modal */}
+      {showModal && (
+        <ResumeDL onAccept={handleAccept} onDecline={handleDecline} />
+      )}
     </div>
   );
 }

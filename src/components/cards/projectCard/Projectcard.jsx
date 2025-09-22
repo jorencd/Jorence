@@ -21,7 +21,7 @@ function Projectcard({ image, title, date, link }) {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#0A2847] text-sm hover:bg-blue-600 text-white px-5 py-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="bg-[#272727] text-sm hover:bg-[#3e3e3e] text-white px-5 py-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             View
           </a>

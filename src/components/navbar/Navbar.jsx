@@ -44,7 +44,7 @@ function Navbar({ darkMode, setDarkMode }) {
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        className={`${darkMode ? "text-white" : "text-black"}`}
+        className={`cursor-pointer ${darkMode ? "text-white" : "text-black"}`}
       >
         <path
           fill="currentColor"
@@ -56,7 +56,7 @@ function Navbar({ darkMode, setDarkMode }) {
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        className={`${darkMode ? "text-white" : "text-black"}`}
+        className={`cursor-pointer ${darkMode ? "text-white" : "text-black"}`}
       >
         {" "}
         <path
@@ -71,7 +71,7 @@ function Navbar({ darkMode, setDarkMode }) {
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        className={`${darkMode ? "text-white" : "text-black"}`}
+        className={`cursor-pointer ${darkMode ? "text-white" : "text-black"}`}
       >
         <path
           fill="currentColor"
@@ -83,7 +83,7 @@ function Navbar({ darkMode, setDarkMode }) {
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        className={`${darkMode ? "text-white" : "text-black"}`}
+        className={`cursor-pointer ${darkMode ? "text-white" : "text-black"}`}
       >
         <path
           fill="currentColor"
@@ -101,6 +101,7 @@ function Navbar({ darkMode, setDarkMode }) {
             width="24"
             height="24"
             viewBox="0 0 24 24"
+            className="cursor-pointer"
           >
             <path
               fill="#facc15"
@@ -111,9 +112,10 @@ function Navbar({ darkMode, setDarkMode }) {
           // Sun icon
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
+            width="24"
+            height="24"
             viewBox="0 0 32 32"
+            className="cursor-pointer"
           >
             <path
               fill="#facc15"

@@ -41,12 +41,12 @@ function Carousel() {
       {[1, 2, 3, 4].map((num) => (
         <SwiperSlide key={num}>
           <div className="lg:w-64 lg:h-54 h-44 w-44 bg-white border border-black/20 p-5 lg:p-9 space-y-2 lg:space-y-3 relative overflow-hidden rounded-2xl">
-            <div className="w-16 h-16 lg:w-24 lg:h-24 bg-violet-500 rounded-full absolute -right-3 -top-4 lg:-right-5 lg:-top-7">
+            <div className="w-16 h-16 lg:w-24 lg:h-24 bg-[#e3b655d8] rounded-full absolute -right-3 -top-4 lg:-right-5 lg:-top-7">
               <p className="absolute bottom-3 left-4 lg:bottom-6 lg:left-7 text-white text-lg lg:text-2xl">
                 0{num}
               </p>
             </div>
-            <div className="fill-violet-500 w-8 lg:w-12">
+            <div className="fill-[#E3B555] w-8 lg:w-12">
               <svg
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
