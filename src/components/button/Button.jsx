@@ -92,7 +92,7 @@ function Button({ darkMode, setDarkMode }) {
         type="button"
       >
         <div
-          className="bg-[#E3B555] rounded-xl h-8 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[95%] group-focus:w-[95%] 
+          className="bg-[#E3B555] rounded-xl h-8 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[94%] group-focus:w-[94%] 
        z-21 duration-500"
         >
           <svg
