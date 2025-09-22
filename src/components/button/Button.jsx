@@ -88,11 +88,11 @@ function Button({ darkMode, setDarkMode }) {
 
       <button
         onClick={handleResumeClick}
-        className="bg-white shadow text-center lg:w-35 w-30 rounded-full h-10 relative text-black text-sm font-semibold group"
+        className="bg-white shadow text-center lg:w-35 w-30 rounded-2xl h-10 relative text-black text-sm font-semibold group"
         type="button"
       >
         <div
-          className="bg-[#E3B555] rounded-full h-8 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[95%] group-focus:w-[95%] 
+          className="bg-[#E3B555] rounded-xl h-8 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[95%] group-focus:w-[95%] 
        z-21 duration-500"
         >
           <svg
