@@ -9,7 +9,7 @@ function Hero({ darkMode, setDarkMode }) {
         <h1 className="text-3xl font-bold sm:text-3xl md:text-3xl lg:text-5xl ">
           Hi, I'm Jorence
         </h1>
-        <p className="pr-2 lg:text-lg md:text-m lg:pr-0">
+        <p className="pr-2 text-sm lg:text-base md:text-m lg:pr-0">
           Web & Game Developer | Digital Artist. I love creating interactive worlds, building for the web, and bringing ideas to life.
         </p>
         <Button darkMode={darkMode} setDarkMode={setDarkMode} />
