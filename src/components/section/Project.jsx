@@ -14,36 +14,31 @@ function Project({ darkMode }) {
       image: picture1,
       gradient: gradientImage1,
       title: "TaskFlow",
-      date: "November 22, 2023",
+      description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
       link: "#",
     },
     {
       image: picture2,
       gradient: gradientImage2,
       title: "Finance Tracker",
-      date: "October 2, 2023",
+      description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
       link: "#",
     },
     {
       image: picture3,
       gradient: gradientImage3,
       title: "Portfolio Website",
-      date: "September 1, 2024",
+      description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
       link: "#",
     },
   ];
 
   return (
-    <div className="flex flex-col gap-y-3 lg:gap-y-4 lg:pt-6 pt-4">
-      <div>
-        <p className={`text-base lg:text-xl font-normal inline px-3 py-1 rounded-xl ${darkMode ? "bg-white text-black" : "bg-black text-white"}`}>
-          My Projects
-        </p>
-      </div>
-      <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold">
+    <div className="flex flex-col pt-4 gap-y-3 lg:gap-y-6 lg:pt-6">
+      <h1 className="text-2xl font-semibold sm:text-3xl md:text-3xl lg:text-4xl">
         Check out my latest work
       </h1>
-      <p className="lg:text-xl font-light">
+      <p className="font-light lg:text-lg">
         I’ve worked on a wide range of projects, from simple websites to complex
         web applications. Here are a few of my favorites.
       </p>
@@ -51,10 +46,10 @@ function Project({ darkMode }) {
       {/* ✅ Auto-loop projects */}
       <div className="text-[#2e2e2e] flex flex-col lg:grid lg:grid-cols-3 gap-y-6 lg:gap-x-14 lg:flex-row lg:w-full">
         {projects.map((project, index) => (
-          <Projectcard key={index} {...project} />
+          <Projectcard key={index} {...project} darkMode={darkMode} />
         ))}
       </div>
-      <a className="underline mt-2" href="">See more</a>
+      <a className="mt-2 underline" href="">See more</a>
     </div>
   );
 }

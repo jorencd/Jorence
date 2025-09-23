@@ -2,21 +2,16 @@ import React from "react";
 
 function Contact({ darkMode }) {
   return (
-    <div className="flex flex-col gap-y-3 lg:gap-y-4 lg:pt-6 pt-4 lg:items-center lg:justify-center">
-      <div>
-        <p className={`text-base lg:text-xl font-normal inline px-3 py-1 rounded-xl ${darkMode ? "bg-white text-black" : "bg-black text-white"}`}>
-          Contact
-        </p>
-      </div>
-      <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold">
+    <div className="flex flex-col pt-4 gap-y-3 lg:gap-y-4 lg:pt-6 lg:items-center lg:justify-center">
+      <h1 className="text-2xl font-semibold sm:text-3xl md:text-3xl lg:text-4xl">
         Get in Touch
       </h1>
-      <p className="lg:w-3/5 lg:text-center lg:text-xl font-light">
+      <p className="font-light lg:w-3/5 lg:text-center lg:text-lg">
         Let’s connect! Feel free to reach out for collaborations, opportunities,
         or any inquiries.
       </p>
       <div className="pb-6 lg:pb-2">
-        <ul className="flex flex-col lg:justify-center lg:flex-row gap-y-4 lg:gap-x-10 text-sm lg:text-lg font-medium lg:pt-8">
+        <ul className="flex flex-col text-sm font-medium lg:justify-center lg:flex-row gap-y-4 lg:gap-x-10 lg:text-lg lg:pt-8">
           <li>
             <a
               className="flex flex-row gap-2 text-xs lg:text-sm"

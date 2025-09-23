@@ -25,15 +25,10 @@ function Courses({ darkMode }) {
       ];
   return (
     <div className="flex flex-col pt-4 gap-y-3 lg:gap-y-4 lg:pt-6">
-      <div>
-        <p className={`text-base lg:text-xl font-normal inline px-3 py-1 rounded-xl ${darkMode ? "bg-white text-black" : "bg-black text-white"}`}>
-          Courses
-        </p>
-      </div>
       <h1 className="text-2xl font-semibold sm:text-3xl md:text-3xl lg:text-4xl">
         My IT Learning Journey
       </h1>
-      <p className="font-light lg:text-xl">
+      <p className="font-light lg:text-lg">
         Here are some of the key courses I completed during my IT studies that
         helped shape my skills and knowledge.
       </p>

@@ -1,6 +1,7 @@
 /* Tailwind v4 import */
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "flowbite-typography";
 
 /* Custom global styles */
 body {

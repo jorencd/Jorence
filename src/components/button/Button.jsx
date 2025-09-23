@@ -88,7 +88,7 @@ function Button({ darkMode, setDarkMode }) {
 
       <button
         onClick={handleResumeClick}
-        className="bg-white shadow text-center lg:w-35 w-30 rounded-2xl h-10 relative text-black text-sm font-semibold group"
+        className="relative h-10 text-sm font-semibold text-center text-black bg-white shadow lg:w-35 w-30 rounded-2xl group"
         type="button"
       >
         <div
@@ -107,7 +107,7 @@ function Button({ darkMode, setDarkMode }) {
             />
           </svg>
         </div>
-        <p className="translate-x-2 relative z-20">Resume</p>
+        <p className="relative z-20 translate-x-2">Resume</p>
       </button>
 
       {/* Modal */}

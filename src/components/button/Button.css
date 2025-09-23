@@ -6,7 +6,7 @@
 
 /* From Uiverse.io by SharpTH */ 
 .btn-cssbuttons {
- --btn-color: #101010d8;
+ --btn-color: #373737fe;
  position: relative;
  font-family: Roboto, sans-serif;
  font-weight: 500;
@@ -17,7 +17,7 @@
  outline: none;
  overflow: hidden;
  cursor: pointer;
- filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.244));
+ filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0));
  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 

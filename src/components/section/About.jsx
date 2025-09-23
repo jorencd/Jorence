@@ -3,10 +3,10 @@ import React from 'react'
 function About() {
   return (
     <div className="flex flex-col gap-y-2">
-        <h1 className="text-xl lg:text-3xl font-semibold">
+        <h1 className="text-xl font-semibold lg:text-3xl">
             About
         </h1>
-        <p className="lg:text-lg font-light">
+        <p className="font-light lg:text-lg">
             I’m Jorence Mendoza, a BSIT graduate majoring in Web and Game Development. 
             I’m passionate about creating interactive experiences—whether it’s building websites, 
             developing games, or exploring digital art. 
