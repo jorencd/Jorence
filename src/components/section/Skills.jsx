@@ -1,9 +1,9 @@
 function Skills({ darkMode }) {
   return (
-    <div className="flex flex-col gap-y-2 w-full">
-      <h1 className="text-xl lg:text-3xl font-semibold">Tech Stack</h1>
-      <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-8">
-        <div className="flex flex-row w-full gap-x-4 items-center">
+    <div className="flex flex-col w-full gap-y-2">
+      <h1 className="text-xl font-semibold lg:text-3xl">Tech Stack</h1>
+      <div className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-8">
+        <div className="flex flex-row items-center w-full gap-x-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={`w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 ${darkMode ? " text-white" : "text-black"}`}
@@ -17,16 +17,16 @@ function Skills({ darkMode }) {
             />
           </svg>
           <div>
-            <h2 className="font-medium text-sm">Adobe Illustrator</h2>
+            <h2 className="text-sm font-medium">Adobe Illustrator</h2>
             <span className="flex flex-row gap-x-2">
               <button className={`rounded-full text-sm px-4 ${darkMode ? "bg-gray-200 text-black" : "bg-[#000000] text-white"}`}>
                 10+
               </button>
-              <p className="text-gray-500 text-sm">Projects</p>
+              <p className="text-sm text-gray-500">Projects</p>
             </span>
           </div>
         </div>
-        <div className="flex flex-row w-full gap-x-4 items-center">
+        <div className="flex flex-row items-center w-full gap-x-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={`w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 ${darkMode ? " text-white" : "text-black"}`}
@@ -38,16 +38,16 @@ function Skills({ darkMode }) {
             />
           </svg>
           <div>
-            <h2 className="font-medium text-sm">React</h2>
+            <h2 className="text-sm font-medium">React</h2>
             <span className="flex flex-row gap-x-2">
               <button className={`rounded-full text-sm px-4 ${darkMode ? "bg-gray-200 text-black" : "bg-[#000000] text-white"}`}>
                 10+
               </button>
-              <p className="text-gray-500 text-sm">Projects</p>
+              <p className="text-sm text-gray-500">Projects</p>
             </span>
           </div>
         </div>
-        <div className="flex flex-row w-full gap-x-4 items-center">
+        <div className="flex flex-row items-center w-full gap-x-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={`w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 ${darkMode ? " text-white" : "text-black"}`}
@@ -59,16 +59,16 @@ function Skills({ darkMode }) {
             />
           </svg>
           <div>
-            <h2 className="font-medium text-sm">php</h2>
+            <h2 className="text-sm font-medium">php</h2>
             <span className="flex flex-row gap-x-2">
               <button className={`rounded-full text-sm px-4 ${darkMode ? "bg-gray-200 text-black" : "bg-[#000000] text-white"}`}>
                 10+
               </button>
-              <p className="text-gray-500 text-sm">Projects</p>
+              <p className="text-sm text-gray-500">Projects</p>
             </span>
           </div>
         </div>
-        <div className="flex flex-row w-full gap-x-4 items-center">
+        <div className="flex flex-row items-center w-full gap-x-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={`w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 ${darkMode ? " text-white" : "text-black"}`}
@@ -100,16 +100,16 @@ function Skills({ darkMode }) {
             />
           </svg>
           <div>
-            <h2 className="font-medium text-sm">Figma</h2>
+            <h2 className="text-sm font-medium">Figma</h2>
             <span className="flex flex-row gap-x-2">
               <button className={`rounded-full text-sm px-4 ${darkMode ? "bg-gray-200 text-black" : "bg-[#000000] text-white"}`}>
                 10+
               </button>
-              <p className="text-gray-500 text-sm">Projects</p>
+              <p className="text-sm text-gray-500">Projects</p>
             </span>
           </div>
         </div>
-        <div className="flex flex-row w-full gap-x-4 items-center">
+        <div className="flex flex-row items-center w-full gap-x-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={`w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 ${darkMode ? " text-white" : "text-black"}`}
@@ -121,12 +121,12 @@ function Skills({ darkMode }) {
             />
           </svg>
           <div>
-            <h2 className="font-medium text-sm">Angular</h2>
+            <h2 className="text-sm font-medium">Angular</h2>
             <span className="flex flex-row gap-x-2">
               <button className={`rounded-full text-sm px-4 ${darkMode ? "bg-gray-200 text-black" : "bg-[#000000] text-white"}`}>
                 10+
               </button>
-              <p className="text-gray-500 text-sm">Projects</p>
+              <p className="text-sm text-gray-500">Projects</p>
             </span>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Button from "../button/Button";
 
 function Hero({ darkMode, setDarkMode }) {
   return (
-    <div className="flex flex-row pt-20 sm:gap-x-2 md:gap-x-4 lg:gap-x-20">
+    <div className="flex flex-row pt-10 sm:gap-x-2 md:gap-x-4 lg:gap-x-20">
       <div className="flex flex-col w-4/5 gap-y-2">
         <h1 className="text-3xl font-bold sm:text-3xl md:text-3xl lg:text-5xl ">
           Hi, I'm Jorence
