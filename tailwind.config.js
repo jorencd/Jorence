@@ -1,6 +1,6 @@
 // tailwind.config.js
 export default {
-  darkMode: "class", // <--- add this
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -10,5 +10,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")], // 👈 add DaisyUI here
+  daisyui: {
+    themes: ["light", "dark", "cupcake"], // optional: pick DaisyUI themes
+  },
 };

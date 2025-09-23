@@ -1,5 +1,6 @@
 /* Tailwind v4 import */
 @import "tailwindcss";
+@plugin "daisyui";
 
 /* Custom global styles */
 body {

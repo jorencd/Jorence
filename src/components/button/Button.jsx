@@ -27,8 +27,8 @@ function Button({ darkMode, setDarkMode }) {
     setShowModal(false);
   };
   return (
-    <div className="flex flex-row gap-x-2">
-      <button className={`btn-cssbuttons py-2 px-7 lg:py-1`}>
+    <div className={`flex flex-row gap-x-2`}>
+      <button className={`btn-cssbuttons py-2 px-7 lg:py-1` }>
         <span>Contact</span>
         <span></span>
         <ul>

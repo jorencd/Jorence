@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className={`flex flex-col min-h-screen ${darkMode ? "bg-gray-900 text-[#dfdfdf] border-white" : "bg-[#f5f5f5] text-[#1f1f1f]"}`}>
-      <div className="flex flex-col justify-center px-10 sm:px-28 md:px-40 lg:px-56 pt-10 gap-y-10">
+      <div className="flex flex-col justify-center px-10 pt-10 sm:px-28 md:px-40 lg:px-56 gap-y-10">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
         <AnimateOnScroll><Hero /></AnimateOnScroll>
