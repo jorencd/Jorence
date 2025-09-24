@@ -44,7 +44,7 @@ function App() {
           <img
             src={line}
             alt="Line SVG"
-            className="object-contain w-full h-auto transition-all duration-300 ease-in-out scale-350 md:scale-175 lg:scale-100"
+            className="z-0 object-contain h-auto transition-all duration-300 ease-in-out lg:w-full"
           />
         </div>
 
