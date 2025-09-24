@@ -10,7 +10,7 @@ import Contact from "./components/section/Contact";
 import Carousel from "./components/carousel/Carousel";
 import Footer from "./components/footer/Footer";
 import AnimateOnScroll from "./components/AnimateOnScroll";
-import line from "./assets/line/line.svg"; // Import your SVG
+import line from "./assets/line/line2.svg"; // Import your SVG
 
 function App() {
   const [darkMode, setDarkMode] = useState(true); // Set darkMode to true by default

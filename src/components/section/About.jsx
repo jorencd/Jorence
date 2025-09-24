@@ -3,7 +3,7 @@ import React from "react";
 
 function About({ darkMode }) {
   return (
-    <div className={`flex flex-col lg:text-center gap-y-2 lg:my-23  p-10 rounded-xl backdrop-blur-lg ${darkMode ? "bg-[#0f0f0f6e]" : "bg-none"}`}>
+    <div className={`flex flex-col lg:text-center gap-y-2 lg:my-23  p-10 rounded-xl backdrop-blur-lg ${darkMode ? "bg-[#0f0f0f88]" : "bg-[#d4d4d449]"}`}>
       <h1 className="text-xl font-semibold lg:text-3xl">About</h1>
       <p className="text-sm font-light lg:text-base">
         I’m Jorence Mendoza, a BSIT graduate majoring in Web and Game
