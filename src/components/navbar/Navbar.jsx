@@ -58,7 +58,7 @@ function Navbar({ darkMode, setDarkMode }) {
           className={`absolute py-5 top-full left-1/2 transform -translate-x-1/2 w-full text-center ${darkMode ? "bg-[#313131]" : "bg-[#dfdfdf]"
       } ${
             isMobileMenuOpen ? "block" : "hidden"
-          } md:hidden`}
+          }`}
         >
           <li className="pb-2">Home</li>
           <li className="pb-2">About</li>
