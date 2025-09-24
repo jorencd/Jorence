@@ -40,11 +40,11 @@ function App() {
         </AnimateOnScroll>
 
         {/* Fixed SVG Line as Background */}
-        <div className="absolute bottom-0 z-0 w-full transform -translate-x-1/2 lg:top-60 left-1/2">
+        <div className="absolute bottom-0 z-0 w-full transform -translate-x-1/2 lg:top-60 md:bottom-1 left-1/2">
           <img
             src={line}
             alt="Line SVG"
-            className="z-0 object-contain h-auto transition-all duration-300 ease-in-out lg:w-full"
+            className="z-0 object-contain transition-all duration-300 ease-in-out"
           />
         </div>
 

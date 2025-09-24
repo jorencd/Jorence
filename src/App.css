@@ -5,4 +5,17 @@
   font-family: 'Inter';
 }
 
+/* Add this CSS to your App.css or equivalent */
+@media screen and (max-width: 768px) {
+  .svg-container {
+    transform: scale(1.5);  /* Scale up the SVG */
+    overflow: hidden; /* Prevents scroll bars from showing up */
+  }
+}
+
+.svg-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
