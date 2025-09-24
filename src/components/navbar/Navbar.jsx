@@ -55,7 +55,7 @@ function Navbar({ darkMode, setDarkMode }) {
 
         {/* Mobile Menu */}
         <ul
-          className={`absolute py-5 top-full left-1/2 transform -translate-x-1/2 w-full text-center ${darkMode ? "bg-[#313131] shadow backdrop-blur-xl" : "bg-[#dfdfdf8d] shadow backdrop-blur-xl"
+          className={`absolute py-5 top-full left-1/2 transform -translate-x-1/2 w-full text-center ${darkMode ? "bg-[#313131] shadow backdrop-blur-xl" : "bg-[#dfdfdf] shadow backdrop-blur-xl"
       } ${
             isMobileMenuOpen ? "block" : "hidden"
           } md:hidden`}

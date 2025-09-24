@@ -10,7 +10,7 @@ import Contact from "./components/section/Contact";
 import Carousel from "./components/carousel/Carousel";
 import Footer from "./components/footer/Footer";
 import AnimateOnScroll from "./components/AnimateOnScroll";
-import line from "./assets/line/line.svg";
+import line from "./assets/line/line.svg"; // Import your SVG
 
 function App() {
   const [darkMode, setDarkMode] = useState(true); // Set darkMode to true by default
@@ -39,17 +39,15 @@ function App() {
           <Hero />
         </AnimateOnScroll>
 
-        {/* Fixed SVG Position */}
-
+        {/* Fixed SVG Line as Background */}
         <div className="fixed bottom-0 z-0 w-full transform -translate-x-1/2 lg:top-60 left-1/2">
           <img
             src={line}
-            alt="Wavy Line"
-            className={`w-full h-auto ${
-              darkMode ? "stroke-white" : "stroke-black"
-            }`}
+            alt="Line SVG"
+            className="object-contain w-full h-auto transition-all duration-300 ease-in-out sm:scale-150 md:scale-175 lg:scale-100"
           />
         </div>
+
         <AnimateOnScroll>
           <Carousel darkMode={darkMode} />
         </AnimateOnScroll>

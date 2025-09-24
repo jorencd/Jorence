@@ -3,7 +3,7 @@ import React from "react";
 
 function About({ darkMode }) {
   return (
-    <div className="flex flex-col lg:text-center gap-y-2 lg:my-23">
+    <div className="flex flex-col lg:text-center gap-y-2 lg:my-23 z-1">
       <h1 className="text-xl font-semibold lg:text-3xl">About</h1>
       <p className="text-sm font-light lg:text-base">
         I’m Jorence Mendoza, a BSIT graduate majoring in Web and Game
@@ -15,7 +15,7 @@ function About({ darkMode }) {
 
       
 
-      <ul class={`flex lg:justify-center mt-5 space-x-5 ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+      <ul class={`flex lg:justify-center mt-5 space-x-5 z-1 ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
         <li>
           <a class="">
             <svg
