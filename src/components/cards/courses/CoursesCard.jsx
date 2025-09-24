@@ -10,7 +10,7 @@ function CoursesCard({ date, title, description, source, darkMode }) {
         {/* Circle Marker with SVG */}
         <div
           className={`absolute flex items-center justify-center border border-gray-400 rounded-full lg:size-13 size-10 top-5 ${
-            darkMode ? "bg-gray-900 " : "bg-[#f5f5f5]"
+            darkMode ? "bg-[#171717] " : "bg-[#f5f5f5]"
           }`}
         >
           <svg

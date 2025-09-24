@@ -9,7 +9,7 @@
  --btn-color: #373737fe;
  position: relative;
  font-family: Roboto, sans-serif;
- font-weight: 500;
+ font-weight: 400;
  font-size: 16px;
  line-height: 1;
  color: rgba(255, 255, 255, 0.841);
@@ -46,7 +46,7 @@
 }
 
 .btn-cssbuttons span:first-child {
- padding-right: 7px;
+ padding-right: 0px;
 }
 
 .btn-cssbuttons span span {
