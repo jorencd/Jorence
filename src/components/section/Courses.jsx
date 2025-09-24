@@ -24,7 +24,7 @@ function Courses({ darkMode }) {
       },
       ];
   return (
-    <div className="flex flex-col pt-4 gap-y-3 lg:gap-y-4 lg:pt-6">
+    <div className="flex flex-col pt-4 gap-y-3 lg:gap-y-4 lg:pt-6 z-1">
       <p className={`text-xs font-semibold lg:text-sm ${darkMode ? "text-[#9d9d9d]" : "text-gray-600"}`}>COURSES</p>
       <h1 className="text-2xl font-semibold sm:text-3xl md:text-3xl lg:text-4xl">
         My IT Learning Journey

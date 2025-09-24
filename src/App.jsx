@@ -40,14 +40,16 @@ function App() {
         </AnimateOnScroll>
 
         {/* Fixed SVG Position */}
-        <div className="absolute z-0 w-full transform -translate-x-1/2 lg:top-60 bottom-10 left-1/2">
+
+        <div className="fixed bottom-0 z-0 w-full transform -translate-x-1/2 lg:top-60 left-1/2">
           <img
             src={line}
             alt="Wavy Line"
-            className={`w-full h-auto ${darkMode ? 'stroke-white' : 'stroke-black'}`}
+            className={`w-full h-auto ${
+              darkMode ? "stroke-white" : "stroke-black"
+            }`}
           />
         </div>
-
         <AnimateOnScroll>
           <Carousel darkMode={darkMode} />
         </AnimateOnScroll>

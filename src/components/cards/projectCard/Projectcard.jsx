@@ -3,7 +3,7 @@ import "./Projectcard.css";
 
 function Projectcard({ image, title, description, link , darkMode}) {
   return (
-    <div className={`max-w-sm border rounded-lg shadow-sm ${
+    <div className={`max-w-sm border rounded-lg shadow-sm z-1 ${
             darkMode ? "bg-gray-800 text-gray-300 border-gray-700" : "bg-[#f5f5f5] text-gray-800 border-gray-200"
           }`}>
       {/* Image */}

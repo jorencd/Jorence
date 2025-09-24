@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function About({ darkMode }) {
   return (
     <div className="flex flex-col lg:text-center gap-y-2 lg:my-23">
@@ -11,6 +12,8 @@ function About({ darkMode }) {
         exploring digital art. I enjoy turning ideas into engaging projects that
         connect with people.
       </p>
+
+      
 
       <ul class={`flex lg:justify-center mt-5 space-x-5 ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
         <li>
