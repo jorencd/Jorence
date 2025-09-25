@@ -10,12 +10,11 @@ import Contact from "./components/section/Contact";
 import Carousel from "./components/carousel/Carousel";
 import Footer from "./components/footer/Footer";
 import AnimateOnScroll from "./components/AnimateOnScroll";
-import line from "./assets/line/line2.svg"; // Import your SVG
+import line from "./assets/line/line2.svg";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true); // Set darkMode to true by default
+  const [darkMode, setDarkMode] = useState(true);
 
-  // Optional: remember user preference
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -39,7 +38,6 @@ function App() {
           </div>
         </AnimateOnScroll>
 
-        {/* Fixed SVG Line as Background */}
         <div className="absolute bottom-0 z-0 w-full transform -translate-x-1/2 lg:top-60 md:bottom-0 sm:bottom-0 left-1/2">
           <img
             src={line}
@@ -48,9 +46,11 @@ function App() {
           />
         </div>
 
-        <AnimateOnScroll>
+        <div>
+          <h1 className={`absolute z-10 font-normal md:top-73 sm:top-70 lg:text-2xl top-74 ${darkMode ? "text-gray-200" : "text-gray-900"}}`}>Service I offer</h1>
             <Carousel darkMode={darkMode} />
-        </AnimateOnScroll>
+        </div>
+        
         <AnimateOnScroll delay={0.1}>
           <div id="about">
             <About darkMode={darkMode} />

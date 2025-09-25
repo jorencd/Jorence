@@ -4,7 +4,7 @@ import "./Projectcard.css";
 function Projectcard({ image, title, description, link , darkMode}) {
   return (
     <div className={`max-w-sm border rounded-lg shadow-sm z-1 ${
-            darkMode ? "bg-gray-800 text-gray-300 border-gray-700" : "bg-[#f5f5f5] text-gray-800 border-gray-200"
+            darkMode ? "bg-[#1f1f1f] text-[#b4b4b4] border-gray-600" : "bg-white text-gray-900 border-gray-300"
           }`}>
       {/* Image */}
       <a href={link} target="_blank" rel="noopener noreferrer">
@@ -30,7 +30,7 @@ function Projectcard({ image, title, description, link , darkMode}) {
           target="_blank"
           rel="noopener noreferrer"
           className={`inline-flex items-center px-3 py-2 text-sm font-normal text-center rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 ${
-            darkMode ? "bg-white hover:bg-[#e3e3e3] text-gray-900 " : "bg-gray-800 text-white hover:bg-gray-700"
+            darkMode ? "bg-[#dbdbdb] hover:bg-[#e3e3e3] text-gray-900 " : "bg-gray-800 text-white hover:bg-gray-700"
           }`}
         >
           View Project

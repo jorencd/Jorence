@@ -60,13 +60,13 @@ function Project({ darkMode }) {
         ))}
       </div>
       <a className="flex items-center mt-2 font-bold w-fit gap-x-2 group" href="#">
-        <div className="px-2 py-1 transition bg-gray-900 rounded group-hover:bg-gray-700">
+        <div className={`px-2 py-1 transition rounded  ${darkMode ? "bg-white" : "bg-gray-900"}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="10"
             height="22"
             viewBox="0 0 12 24"
-            className="text-white"
+            className={`${darkMode ? "text-black" : "text-white"}`}
           >
             <defs>
               <path
