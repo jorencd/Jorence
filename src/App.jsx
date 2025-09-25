@@ -47,7 +47,7 @@ function App() {
         </div>
 
         <div>
-          <h1 className={`absolute z-10 font-normal md:top-73 sm:top-70 lg:text-2xl top-74 ${darkMode ? "text-gray-200" : "text-gray-900"}}`}>Service I offer</h1>
+          <h1 className={`absolute z-10 font-normal md:top-72 sm:top-70 lg:text-2xl top-73 ${darkMode ? "text-gray-200" : "text-gray-900"}}`}>Service I offer</h1>
             <Carousel darkMode={darkMode} />
         </div>
         
