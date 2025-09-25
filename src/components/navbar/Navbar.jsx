@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 import "./Navbar.css";
 
 function Navbar({ darkMode, setDarkMode }) {
@@ -48,21 +49,80 @@ function Navbar({ darkMode, setDarkMode }) {
       <div className="flex flex-row items-center mx-auto gap-x-7 lg:gap-x-20">
         {/* Desktop Menu */}
         <ul className="hidden lg:flex gap-x-10">
-          <li>Home</li>
-          <li>About</li>
-          <li>Portfolio</li>
+          <li>
+            <Link
+              to="home" // Link to the "home" section
+              smooth={true}
+              duration={500}
+              offset={-70} // Adjust for sticky navbar height
+              className="cursor-pointer"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="about" // Link to the "about" section
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="cursor-pointer"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="portfolio" // Link to the "portfolio" section
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="cursor-pointer"
+            >
+              Portfolio
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile Menu */}
         <ul
-          className={`absolute py-5 top-full left-1/2 transform -translate-x-1/2 w-full text-center ${darkMode ? "bg-[#313131]" : "bg-[#dfdfdf]"
-      } ${
+          className={`absolute py-5 top-full left-1/2 transform -translate-x-1/2 w-full text-center ${darkMode ? "bg-[#313131]" : "bg-[#dfdfdf]"} ${
             isMobileMenuOpen ? "block" : "hidden"
           }`}
         >
-          <li className="pb-2">Home</li>
-          <li className="pb-2">About</li>
-          <li className="pb-2">Portfolio</li>
+          <li className="pb-2">
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="pb-2">
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+          </li>
+          <li className="pb-2">
+            <Link
+              to="portfolio"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Portfolio
+            </Link>
+          </li>
         </ul>
       </div>
 

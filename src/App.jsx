@@ -27,16 +27,16 @@ function App() {
   return (
     <div
       className={`flex flex-col min-h-screen ${
-        darkMode
-          ? "bg-[#171717] text-[#dfdfdf] border-white"
-          : "bg-[#f5f5f5] text-[#1f1f1f]"
+        darkMode ? "bg-[#171717] text-[#dfdfdf] border-white" : "bg-[#f5f5f5] text-[#1f1f1f]"
       }`}
     >
       <div className="flex flex-col justify-center px-10 pt-10 sm:px-28 md:px-40 lg:px-56 gap-y-15">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
         <AnimateOnScroll>
-          <Hero />
+          <div id="home">
+            <Hero />
+          </div>
         </AnimateOnScroll>
 
         {/* Fixed SVG Line as Background */}
@@ -49,22 +49,32 @@ function App() {
         </div>
 
         <AnimateOnScroll>
-          <Carousel darkMode={darkMode} />
+            <Carousel darkMode={darkMode} />
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.1}>
-          <About darkMode={darkMode} />
+          <div id="about">
+            <About darkMode={darkMode} />
+          </div>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.2}>
-          <Skills darkMode={darkMode} />
+          <div id="skills">
+            <Skills darkMode={darkMode} />
+          </div>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.3}>
-          <Project darkMode={darkMode} />
+          <div id="portfolio">
+            <Project darkMode={darkMode} />
+          </div>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.4}>
-          <Courses darkMode={darkMode} />
+          <div id="courses">
+            <Courses darkMode={darkMode} />
+          </div>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.5}>
-          <Contact darkMode={darkMode} />
+          <div id="contact">
+            <Contact darkMode={darkMode} />
+          </div>
         </AnimateOnScroll>
       </div>
 
