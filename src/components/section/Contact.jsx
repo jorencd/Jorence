@@ -7,7 +7,10 @@ function Contact({ darkMode }) {
     email: "",
     message: "",
   });
-  
+
+  const [success, setSuccess] = useState(false); // Success alert state
+  const [error, setError] = useState(false); // Error alert state
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({
@@ -21,14 +24,12 @@ function Contact({ darkMode }) {
 
     const { name, email, message } = formData;
 
-    // Adjusting templateParams to match EmailJS placeholders
     const templateParams = {
       name: name,
-      email: email, // Ensure the email is captured in the template
+      email: email,
       message: message,
     };
 
-    // Send the email using EmailJS
     emailjs
       .send(
         "service_qaaf1qg",
@@ -39,13 +40,21 @@ function Contact({ darkMode }) {
       .then(
         (response) => {
           console.log("Email sent successfully:", response);
-          alert("Your message has been sent!");
+          setSuccess(true); // Show success alert
+          setError(false); // Hide error alert
+          setFormData({ name: "", email: "", message: "" }); // Clear the form
         },
         (error) => {
           console.error("Error sending email:", error);
-          alert("Oops! Something went wrong. Please try again later.");
+          setSuccess(false); // Hide success alert
+          setError(true); // Show error alert
         }
       );
+  };
+
+  const closeModal = () => {
+    setSuccess(false);
+    setError(false);
   };
 
   return (
@@ -66,10 +75,120 @@ function Contact({ darkMode }) {
           </p>
         </div>
 
+        {/* Success and Error Floating Alerts */}
+        {success && (
+          <div className="fixed z-50 w-full max-w-xs p-4 transform -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg left-1/2 top-1/2 bg-teal-50 dark:bg-teal-800">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <span className="inline-flex items-center justify-center text-teal-800 bg-teal-200 border-4 border-teal-100 rounded-full size-8 dark:border-teal-900 dark:bg-teal-800 dark:text-teal-400">
+                  <svg
+                    className="shrink-0 size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </span>
+                <div className="ms-3">
+                  <h3 className="font-semibold text-gray-800 dark:text-white">
+                    Successfully sent.
+                  </h3>
+                  <p className="text-sm text-gray-700 dark:text-neutral-400">
+                    Your message has been sent successfully.
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={closeModal} // Fixed the button to call closeModal
+                className="text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+                aria-label="Close"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="w-5 h-5"
+                >
+                  <path d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {error && (
+          <div className="fixed z-50 w-full max-w-xs p-4 transform -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg left-1/2 top-1/2 bg-red-50 dark:bg-red-800">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <span className="inline-flex items-center justify-center text-red-800 bg-red-200 border-4 border-red-100 rounded-full size-8 dark:border-red-900 dark:bg-red-800 dark:text-red-400">
+                  <svg
+                    className="shrink-0 size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                </span>
+                <div className="ms-3">
+                  <h3 className="font-semibold text-gray-800 dark:text-white">
+                    Error!
+                  </h3>
+                  <p className="text-sm text-gray-700 dark:text-neutral-400">
+                    Oops! Something went wrong. Please try again later.
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={closeModal} // Fixed the button to call closeModal
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="w-6 h-6"
+                >
+                  <path d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Form */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
           <div className="pb-10 mb-10 border-b md:order-2 border-neutral-800 md:border-b-0 md:pb-0 md:mb-0">
             <form onSubmit={handleSubmit}>
               <div className="space-y-4">
+                {/* Name input */}
                 <div className="relative">
                   <input
                     required
@@ -93,19 +212,20 @@ function Contact({ darkMode }) {
                   <label
                     htmlFor="name"
                     className={`absolute top-0 start-0 p-3 sm:p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                        peer-focus:text-xs
-                        peer-focus:-translate-y-1.5
-                        peer-focus:text-neutral-400
-                        peer-not-placeholder-shown:text-xs
-                        peer-not-placeholder-shown:-translate-y-1.5
-                        peer-not-placeholder-shown:text-neutral-400 ${
-                          darkMode ? "text-neutral-400" : "text-neutral-700"
-                        }`}
+                      peer-focus:text-xs
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-neutral-400
+                      peer-not-placeholder-shown:text-xs
+                      peer-not-placeholder-shown:-translate-y-1.5
+                      peer-not-placeholder-shown:text-neutral-400 ${
+                        darkMode ? "text-neutral-400" : "text-neutral-700"
+                      }`}
                   >
                     Name
                   </label>
                 </div>
 
+                {/* Email input */}
                 <div className="relative">
                   <input
                     required
@@ -129,19 +249,20 @@ function Contact({ darkMode }) {
                   <label
                     htmlFor="email"
                     className={`absolute top-0 start-0 p-3 sm:p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                        peer-focus:text-xs
-                        peer-focus:-translate-y-1.5
-                        peer-focus:text-neutral-400
-                        peer-not-placeholder-shown:text-xs
-                        peer-not-placeholder-shown:-translate-y-1.5
-                        peer-not-placeholder-shown:text-neutral-400 ${
-                          darkMode ? "text-neutral-400" : "text-neutral-700"
-                        }`}
+                      peer-focus:text-xs
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-neutral-400
+                      peer-not-placeholder-shown:text-xs
+                      peer-not-placeholder-shown:-translate-y-1.5
+                      peer-not-placeholder-shown:text-neutral-400 ${
+                        darkMode ? "text-neutral-400" : "text-neutral-700"
+                      }`}
                   >
                     Email
                   </label>
                 </div>
 
+                {/* Message input */}
                 <div className="relative">
                   <textarea
                     required
@@ -165,14 +286,14 @@ function Contact({ darkMode }) {
                   <label
                     htmlFor="message"
                     className={`absolute top-0 start-0 p-3 sm:p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                        peer-focus:text-xs
-                        peer-focus:-translate-y-1.5
-                        peer-focus:text-neutral-400
-                        peer-not-placeholder-shown:text-xs
-                        peer-not-placeholder-shown:-translate-y-1.5
-                        peer-not-placeholder-shown:text-neutral-400 ${
-                          darkMode ? "text-neutral-400" : "text-neutral-700"
-                        }`}
+                      peer-focus:text-xs
+                      peer-focus:-translate-y-1.5
+                      peer-focus:text-neutral-400
+                      peer-not-placeholder-shown:text-xs
+                      peer-not-placeholder-shown:-translate-y-1.5
+                      peer-not-placeholder-shown:text-neutral-400 ${
+                        darkMode ? "text-neutral-400" : "text-neutral-700"
+                      }`}
                   >
                     Send message
                   </label>
@@ -211,14 +332,15 @@ function Contact({ darkMode }) {
             </form>
           </div>
 
+          {/* Contact Info Section */}
           <div
-            class={`space-y-14 ${
+            className={`space-y-14 ${
               darkMode ? "text-neutral-400" : "text-gray-900"
             }`}
           >
-            <div class="flex gap-x-5">
+            <div className="flex gap-x-5">
               <svg
-                class="shrink-0 size-6"
+                className="shrink-0 size-6"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -232,10 +354,10 @@ function Contact({ darkMode }) {
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <div class="grow">
-                <h4 class="font-semibold">Address:</h4>
+              <div className="grow">
+                <h4 className="font-semibold">Address:</h4>
 
-                <address class="mt-1 text-sm not-italic">
+                <address className="mt-1 text-sm not-italic">
                   Sampaga, San Antonio
                   <br />
                   Quezon, Philippines
@@ -243,9 +365,9 @@ function Contact({ darkMode }) {
               </div>
             </div>
 
-            <div class="flex gap-x-5">
+            <div className="flex gap-x-5">
               <svg
-                class="shrink-0 size-6"
+                className="shrink-0 size-6"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -259,11 +381,11 @@ function Contact({ darkMode }) {
                 <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
                 <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
               </svg>
-              <div class="grow">
-                <h4 class="font-semibold">Email:</h4>
+              <div className="grow">
+                <h4 className="font-semibold">Email:</h4>
 
                 <a
-                  class="mt-1 text-sm focus:outline-hidden"
+                  className="mt-1 text-sm focus:outline-hidden"
                   href="#mailto:jorencemendoza2@gmail.com"
                   target="_blank"
                 >
@@ -272,9 +394,9 @@ function Contact({ darkMode }) {
               </div>
             </div>
 
-            <div class="flex gap-x-5">
+            <div className="flex gap-x-5">
               <svg
-                class="shrink-0 size-6"
+                className="shrink-0 size-6"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -288,11 +410,11 @@ function Contact({ darkMode }) {
                 <path d="m3 11 18-5v12L3 14v-3z" />
                 <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
               </svg>
-              <div class="grow">
-                <h4 class="font-semibold">
+              <div className="grow">
+                <h4 className="font-semibold">
                   Let's Build Something Amazing Together!
                 </h4>
-                <p class="mt-1">
+                <p className="mt-1">
                   With a passion for both art and technology, I bring creative
                   solutions and a sharp eye for design to every project.
                 </p>
