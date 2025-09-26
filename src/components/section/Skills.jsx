@@ -10,7 +10,7 @@ function Skills({ darkMode }) {
   return (
     <div className="flex flex-col pt-4 gap-y-3 lg:gap-y-6 lg:pt-6">
       <h1 className="text-xl font-semibold lg:text-3xl">Tech Stack</h1>
-      <div className="pl-8 mt-4">
+      <div className="mt-4 ">
         <ul className={`flex font-medium lg:gap-x-10 gap-x-5`}>
           <li
             className={`cursor-pointer ${selected === 0 ? "border-b-3 border-[#E3B555]" : ""}`}
@@ -34,7 +34,7 @@ function Skills({ darkMode }) {
       </div>
 
       {/* Conditionally render content based on the selected tab */}
-      <div className="pl-8 ">
+      <div className="">
         {selected === 0 && (
           <div>
             <h2 className="text-lg font-semibold">Front End</h2>
