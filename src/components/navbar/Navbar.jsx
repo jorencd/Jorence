@@ -82,6 +82,17 @@ function Navbar({ darkMode, setDarkMode }) {
               Portfolio
             </Link>
           </li>
+          <li>
+            <Link
+              to="contact" // Link to the "portfolio" section
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="cursor-pointer"
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile Menu */}
@@ -121,6 +132,17 @@ function Navbar({ darkMode, setDarkMode }) {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Portfolio
+            </Link>
+          </li>
+          <li className="pb-2">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
             </Link>
           </li>
         </ul>

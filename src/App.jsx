@@ -8,9 +8,9 @@ import Project from "./components/section/Project";
 import Courses from "./components/section/Courses";
 import Contact from "./components/section/Contact";
 import Carousel from "./components/carousel/Carousel";
-import Footer from "./components/footer/Footer";
 import AnimateOnScroll from "./components/AnimateOnScroll";
 import line from "./assets/line/line2.svg";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -76,9 +76,13 @@ function App() {
             <Contact darkMode={darkMode} />
           </div>
         </AnimateOnScroll>
-      </div>
+        <div>
+          <div>
+            <Footer darkMode={darkMode} />
+          </div>
+        </div>
 
-      <Footer />
+      </div>
     </div>
   );
 }

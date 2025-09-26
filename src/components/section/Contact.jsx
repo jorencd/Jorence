@@ -1,131 +1,290 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 function Contact({ darkMode }) {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData({
+      ...formData,
+      [id]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, email, message } = formData;
+
+    // Adjusting templateParams to match EmailJS placeholders
+    const templateParams = {
+      name: name,
+      email: email,  // Ensure the email is captured in the template
+      message: message,
+    };
+
+    // Send the email using EmailJS
+    emailjs
+      .send("service_qaaf1qg", "template_jq7021s", templateParams, "QWJkr_3fxiqYqi8rQ")
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          alert("Your message has been sent!");
+        },
+        (error) => {
+          console.error("Error sending email:", error);
+          alert("Oops! Something went wrong. Please try again later.");
+        }
+      );
+  };
+
   return (
-    <div className="flex flex-col pt-4 gap-y-3 lg:gap-y-4 lg:pt-6 lg:items-center lg:justify-center">
-      <p className={`text-xs font-semibold lg:text-sm ${darkMode ? "text-[#9d9d9d]" : "text-gray-600"}`}>CONTACT</p>
-      <h1 className="text-2xl font-semibold sm:text-3xl md:text-3xl lg:text-4xl">
-        Get in Touch
-      </h1>
-      <p className="font-light lg:w-3/5 lg:text-center lg:text-lg">
-        Let’s connect! Feel free to reach out for collaborations, opportunities,
-        or any inquiries.
-      </p>
-      <div className="pb-6 lg:pb-2">
-        <ul className="flex flex-col text-sm font-medium lg:justify-center lg:flex-row gap-y-4 lg:gap-x-10 lg:text-lg lg:pt-8">
-          <li>
-            <a
-              className="flex flex-row gap-2 text-xs lg:text-sm"
-              href="mailto:example@example.com"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className={`${darkMode ? " text-white" : "text-black"}`}
-              >
-                <path
-                  fill="currentColor"
-                  d="m19.23 15.26l-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.05 15.05 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2 2 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07c.53 8.54 7.36 15.36 15.89 15.89c1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98"
-                />
-              </svg>
-              <p>+639157970296</p>
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex flex-row gap-2 text-xs lg:text-sm"
-              href="mailto:example@example.com"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className={`${darkMode ? " text-white" : "text-black"}`}
-              >
-                <path
-                  fill="currentColor"
-                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"
-                />
-              </svg>
-              <p>jorencemendoza2@gmail.com</p>
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex flex-row gap-2 text-xs lg:text-sm"
-              href="mailto:example@example.com"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className={`${darkMode ? " text-white" : "text-black"}`}
-              >
-                <path
-                  fill="currentColor"
-                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
-                />
-              </svg>
-              <p>Jorence Mendoza</p>
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex flex-row gap-2 text-xs lg:text-sm"
-              href="mailto:example@example.com"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className={`${darkMode ? " text-white" : "text-black"}`}
-              >
-                <g fill="none">
-                  <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                  <path
-                    fill="currentColor"
-                    d="M16 3a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm-4 5a4 4 0 1 0 0 8a4 4 0 0 0 0-8m0 2a2 2 0 1 1 0 4a2 2 0 0 1 0-4m4.5-3.5a1 1 0 1 0 0 2a1 1 0 0 0 0-2"
+    <div
+      id="contact"
+      className={`bg-none ${darkMode ? "text-white" : "text-black"}`}
+    >
+      <div className="max-w-5xl px-4 py-10 mx-auto xl:px-0 lg:py-20">
+        <div className="max-w-3xl mb-10 lg:mb-14">
+          <h2 className="text-2xl font-semibold md:text-4xl md:leading-tight">
+            Get in Touch
+          </h2>
+          <p className={`mt-1 ${darkMode ? "text-gray-400" : "text-gray-900"}`}>
+            Whatever your goal - I will get you there.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
+          <div className="pb-10 mb-10 border-b md:order-2 border-neutral-800 md:border-b-0 md:pb-0 md:mb-0">
+            <form onSubmit={handleSubmit}>
+              <div className="space-y-4">
+                <div className="relative">
+                  <input
+                    type="text"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={`peer p-3 sm:p-4 block w-full border-transparent rounded-lg sm:text-sm placeholder:text-transparent focus:outline-hidden focus:ring-0 disabled:opacity-50 disabled:pointer-events-none
+                      focus:pt-6
+                      focus:pb-2
+                      not-placeholder-shown:pt-6
+                      not-placeholder-shown:pb-2
+                      autofill:pt-6
+                      autofill:pb-2 ${
+                        darkMode
+                          ? "bg-neutral-800 text-neutral-500"
+                          : "bg-neutral-300 text-neutral-800"
+                      }`}
+                    placeholder="Name"
                   />
-                </g>
-              </svg>
-              <p>jorencee</p>
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex flex-row gap-2 text-xs lg:text-sm"
-              href="mailto:example@example.com"
-            >
+                  <label
+                    htmlFor="name"
+                    className={`absolute top-0 start-0 p-3 sm:p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                        peer-focus:text-xs
+                        peer-focus:-translate-y-1.5
+                        peer-focus:text-neutral-400
+                        peer-not-placeholder-shown:text-xs
+                        peer-not-placeholder-shown:-translate-y-1.5
+                        peer-not-placeholder-shown:text-neutral-400 ${
+                          darkMode ? "text-neutral-400" : "text-neutral-700"
+                        }`}
+                  >
+                    Name
+                  </label>
+                </div>
+
+                <div className="relative">
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`peer p-3 sm:p-4 block w-full border-transparent rounded-lg sm:text-sm placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+                      focus:pt-6
+                      focus:pb-2
+                      not-placeholder-shown:pt-6
+                      not-placeholder-shown:pb-2
+                      autofill:pt-6
+                      autofill:pb-2 ${
+                        darkMode ? "bg-neutral-800" : "bg-neutral-300 text-neutral-900"
+                      }`}
+                    placeholder="Email"
+                  />
+                  <label
+                    htmlFor="email"
+                    className={`absolute top-0 start-0 p-3 sm:p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                        peer-focus:text-xs
+                        peer-focus:-translate-y-1.5
+                        peer-focus:text-neutral-400
+                        peer-not-placeholder-shown:text-xs
+                        peer-not-placeholder-shown:-translate-y-1.5
+                        peer-not-placeholder-shown:text-neutral-400 ${
+                          darkMode ? "text-neutral-400" : "text-neutral-700"
+                        }`}
+                  >
+                    Email
+                  </label>
+                </div>
+
+                <div className="relative">
+                  <textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className={`peer p-3 sm:p-4 block w-full border-transparent rounded-lg sm:text-sm placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
+                      focus:pt-6
+                      focus:pb-2
+                      not-placeholder-shown:pt-6
+                      not-placeholder-shown:pb-2
+                      autofill:pt-6
+                      autofill:pb-2 ${
+                        darkMode
+                          ? "bg-neutral-800 text-white"
+                          : "bg-neutral-300 text-neutral-900"
+                      }`}
+                    placeholder="Message"
+                    data-hs-textarea-auto-height
+                  ></textarea>
+                  <label
+                    htmlFor="message"
+                    className={`absolute top-0 start-0 p-3 sm:p-4 h-full text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
+                        peer-focus:text-xs
+                        peer-focus:-translate-y-1.5
+                        peer-focus:text-neutral-400
+                        peer-not-placeholder-shown:text-xs
+                        peer-not-placeholder-shown:-translate-y-1.5
+                        peer-not-placeholder-shown:text-neutral-400 ${
+                          darkMode ? "text-neutral-400" : "text-neutral-700"
+                        }`}
+                  >
+                    Send message
+                  </label>
+                </div>
+              </div>
+
+              <div className="mt-2">
+                <p className="text-xs text-neutral-500">All fields are required</p>
+
+                <p className="mt-5">
+                  <button
+                    type="submit"
+                    className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#E3B555] font-medium text-sm text-neutral-800 rounded-full focus:outline-hidden"
+                  >
+                    Submit
+                    <svg
+                      className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </button>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div
+            class={`space-y-14 ${
+              darkMode ? "text-neutral-400" : "text-gray-900"
+            }`}
+          >
+            <div class="flex gap-x-5">
               <svg
+                class="shrink-0 size-6"
                 xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                className={`${darkMode ? " text-white" : "text-black"}`}
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-                <g fill="none">
-                  <g clip-path="url(#SVGG1Ot4cAD)">
-                    <path
-                      fill="currentColor"
-                      d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="SVGG1Ot4cAD">
-                      <path fill="#fff" d="M0 0h14v14H0z" />
-                    </clipPath>
-                  </defs>
-                </g>
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
               </svg>
-              <p>Jorence</p>
-            </a>
-          </li>
-        </ul>
+              <div class="grow">
+                <h4 class="font-semibold">Address:</h4>
+
+                <address class="mt-1 text-sm not-italic">
+                  Sampaga, San Antonio
+                  <br />
+                  Quezon, Philippines
+                </address>
+              </div>
+            </div>
+
+            <div class="flex gap-x-5">
+              <svg
+                class="shrink-0 size-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
+                <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
+              </svg>
+              <div class="grow">
+                <h4 class="font-semibold">Email:</h4>
+
+                <a
+                  class="mt-1 text-sm focus:outline-hidden"
+                  href="#mailto:jorencemendoza2@gmail.com"
+                  target="_blank"
+                >
+                  jorencemendoza2@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="flex gap-x-5">
+              <svg
+                class="shrink-0 size-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m3 11 18-5v12L3 14v-3z" />
+                <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+              </svg>
+              <div class="grow">
+                <h4 class="font-semibold">
+                  Let's Build Something Amazing Together!
+                </h4>
+                <p class="mt-1">
+                  With a passion for both art and technology, I bring creative
+                  solutions and a sharp eye for design to every project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
