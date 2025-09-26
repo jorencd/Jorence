@@ -39,7 +39,7 @@ function Skills({ darkMode }) {
           <div>
             <h2 className="text-lg font-semibold">Front End</h2>
             <p>
-              Here you can showcase your front-end technologies and tools, such as HTML, CSS, JavaScript, React, etc.
+              front end
             </p>
           </div>
         )}
@@ -48,7 +48,7 @@ function Skills({ darkMode }) {
           <div>
             <h2 className="text-lg font-semibold">Back End</h2>
             <p>
-              Here you can display your back-end stack, such as Node.js, Express, MongoDB, or any other server-side technologies.
+              back end
             </p>
           </div>
         )}
@@ -57,7 +57,7 @@ function Skills({ darkMode }) {
           <div>
             <h2 className="text-lg font-semibold">Tools</h2>
             <p>
-              Showcase your preferred tools like Git, Docker, Figma, and others.
+              tools
             </p>
           </div>
         )}
