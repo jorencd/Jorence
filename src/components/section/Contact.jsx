@@ -24,13 +24,18 @@ function Contact({ darkMode }) {
     // Adjusting templateParams to match EmailJS placeholders
     const templateParams = {
       name: name,
-      email: email,  // Ensure the email is captured in the template
+      email: email, // Ensure the email is captured in the template
       message: message,
     };
 
     // Send the email using EmailJS
     emailjs
-      .send("service_qaaf1qg", "template_jq7021s", templateParams, "QWJkr_3fxiqYqi8rQ")
+      .send(
+        "service_qaaf1qg",
+        "template_jq7021s",
+        templateParams,
+        "QWJkr_3fxiqYqi8rQ"
+      )
       .then(
         (response) => {
           console.log("Email sent successfully:", response);
@@ -54,7 +59,10 @@ function Contact({ darkMode }) {
             Get in Touch
           </h2>
           <p className={`mt-1 ${darkMode ? "text-gray-400" : "text-gray-900"}`}>
-            Whatever your goal - I will get you there.
+            Whether you're looking to start a new project, need assistance with
+            your web development, or want to collaborate on something creative,
+            I'm here to help. Drop me a message, and let’s make your vision come
+            to life!
           </p>
         </div>
 
@@ -110,7 +118,9 @@ function Contact({ darkMode }) {
                       not-placeholder-shown:pb-2
                       autofill:pt-6
                       autofill:pb-2 ${
-                        darkMode ? "bg-neutral-800" : "bg-neutral-300 text-neutral-900"
+                        darkMode
+                          ? "bg-neutral-800"
+                          : "bg-neutral-300 text-neutral-900"
                       }`}
                     placeholder="Email"
                   />
@@ -167,7 +177,9 @@ function Contact({ darkMode }) {
               </div>
 
               <div className="mt-2">
-                <p className="text-xs text-neutral-500">All fields are required</p>
+                <p className="text-xs text-neutral-500">
+                  All fields are required
+                </p>
 
                 <p className="mt-5">
                   <button
