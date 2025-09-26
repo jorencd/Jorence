@@ -7,7 +7,7 @@ function Contact({ darkMode }) {
     email: "",
     message: "",
   });
-
+  
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({
@@ -72,6 +72,7 @@ function Contact({ darkMode }) {
               <div className="space-y-4">
                 <div className="relative">
                   <input
+                    required
                     type="text"
                     id="name"
                     value={formData.name}
@@ -107,6 +108,7 @@ function Contact({ darkMode }) {
 
                 <div className="relative">
                   <input
+                    required
                     type="email"
                     id="email"
                     value={formData.email}
@@ -142,6 +144,7 @@ function Contact({ darkMode }) {
 
                 <div className="relative">
                   <textarea
+                    required
                     id="message"
                     value={formData.message}
                     onChange={handleChange}
