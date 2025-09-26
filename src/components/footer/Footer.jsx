@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer({ darkMode }) {
   return (
-    <footer className={`absolute left-0 w-full p-10 rounded footer footer-horizontal footer-center text-base-content ${darkMode ? "bg-[#1a1a1a] text-neutral-400" : "bg-white text-neutral-800"}`}>
+    <footer className={`absolute left-0 w-full p-10 footer footer-horizontal footer-center text-base-content ${darkMode ? "bg-[#1a1a1a] text-neutral-400" : "bg-white text-neutral-800"}`}>
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">Home</a>
         <a className="link link-hover">About</a>
