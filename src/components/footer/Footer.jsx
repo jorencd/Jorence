@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Footer() {
+function Footer({ darkMode }) {
   return (
-    <footer className="absolute left-0 w-full p-10 bg-[#1a1a1a] rounded footer footer-horizontal footer-center text-base-content">
+    <footer className={`absolute left-0 w-full p-10 rounded footer footer-horizontal footer-center text-base-content ${darkMode ? "bg-[#1a1a1a] text-neutral-400" : "bg-white text-neutral-800"}`}>
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">Home</a>
         <a className="link link-hover">About</a>
@@ -47,8 +47,7 @@ function Footer() {
       </nav>
       <aside>
         <p>
-          Copyright © {new Date().getFullYear()} - All right reserved by ACME
-          Industries Ltd
+          Copyright © {new Date().getFullYear()} - All right reserved by <br /> Jorence Mendoza
         </p>
       </aside>
     </footer>
