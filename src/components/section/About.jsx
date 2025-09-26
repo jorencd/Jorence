@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Icon } from "@iconify/react";
 
 function About({ darkMode }) {
   const [isLoading, setIsLoading] = useState(true);

@@ -26,14 +26,16 @@ function App() {
   return (
     <div
       className={`flex flex-col min-h-screen ${
-        darkMode ? "bg-[#171717] text-[#dfdfdf] border-white" : "bg-[#f5f5f5] text-[#1f1f1f]"
+        darkMode
+          ? "bg-[#171717] text-[#dfdfdf] border-white"
+          : "bg-[#f5f5f5] text-[#1f1f1f]"
       }`}
     >
       <div className="flex flex-col justify-center px-10 pt-10 sm:px-28 md:px-40 lg:px-56 gap-y-15">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
         <AnimateOnScroll>
-          <div id="home">
+          <div id="home" className="z-50">
             <Hero />
           </div>
         </AnimateOnScroll>
@@ -46,33 +48,34 @@ function App() {
           />
         </div>
 
-        <div>
-          <h1 className={`absolute z-10 font-normal md:top-72 sm:top-70 lg:text-2xl top-73 ${darkMode ? "text-gray-200" : "text-gray-900"}}`}>Service I offer</h1>
+        <AnimateOnScroll>
+          <div className="z-50">
             <Carousel darkMode={darkMode} />
-        </div>
+          </div>
+        </AnimateOnScroll>
         
         <AnimateOnScroll delay={0.1}>
-          <div id="about">
+          <div className="z-50" id="about">
             <About darkMode={darkMode} />
           </div>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.2}>
-          <div id="skills">
+          <div className="z-50" id="skills">
             <Skills darkMode={darkMode} />
           </div>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.3}>
-          <div id="portfolio">
+          <div className="z-50" id="portfolio">
             <Project darkMode={darkMode} />
           </div>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.4}>
-          <div id="courses">
+          <div className="z-50" id="courses">
             <Courses darkMode={darkMode} />
           </div>
         </AnimateOnScroll>
         <AnimateOnScroll delay={0.5}>
-          <div id="contact">
+          <div className="z-50" id="contact">
             <Contact darkMode={darkMode} />
           </div>
         </AnimateOnScroll>
@@ -81,7 +84,6 @@ function App() {
             <Footer darkMode={darkMode} />
           </div>
         </div>
-
       </div>
     </div>
   );
