@@ -79,7 +79,7 @@ function Navbar({ darkMode, setDarkMode }) {
               offset={-70}
               className="cursor-pointer"
             >
-              Portfolio
+              Project
             </Link>
           </li>
           <li>
@@ -131,7 +131,7 @@ function Navbar({ darkMode, setDarkMode }) {
               offset={-70}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Portfolio
+              Project
             </Link>
           </li>
           <li className="pb-2">

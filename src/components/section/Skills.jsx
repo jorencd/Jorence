@@ -22,6 +22,10 @@ function Skills({ darkMode }) {
       svg: <Icon icon="skill-icons:flutter-dark" width="30" height="30" />,
       text: "Flutter",
     },
+    {
+      svg: <Icon icon="devicon:angular" width="30" height="30" />,
+      text: "Angular",
+    },
   ];
 
   const backEndTech = [
@@ -198,10 +202,7 @@ function Skills({ darkMode }) {
     },
     {
       svg: (
-        <Icon
-          icon="mdi:nodejs"
-          width="30"
-          height="30"
+        <Icon icon="devicon-plain:angular-wordmark" width="30" height="30"
           className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}
         />
       ),
@@ -213,7 +214,7 @@ function Skills({ darkMode }) {
       <h1 className="text-xl font-semibold text-center lg:text-3xl">
         Tech Stack
       </h1>
-      <div className={`flex justify-center pt-3 pb-1 mt-4 rounded-full ${darkMode ? "bg-neutral-800" : "bg-neutral-300"} `}>
+      <div className={`flex justify-center pt-3 pb-1 mt-4 rounded ${darkMode ? "border-b border-t border-neutral-400" : "border-b border-t border-neutral-400"} `}>
         <ul className={`flex font-medium lg:gap-x-10 gap-x-5 ${darkMode ? "text-neutral-400" : "text-neutral-700"}`}>
           <li
             className={`cursor-pointer ${

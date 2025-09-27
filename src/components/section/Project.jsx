@@ -54,36 +54,11 @@ function Project({ darkMode }) {
       </p>
 
       {/* ✅ Auto-loop projects */}
-      <div className="text-[#2e2e2e] flex flex-col justify-center items-center lg:grid lg:grid-cols-3 gap-y-6 lg:gap-x-14 lg:flex-row lg:w-full">
+      <div className="text-[#2e2e2e] grid grid-cols-1 justify-items-center sm:grid-cols-2 sm:gap-x-4 md:grid-cols-2 lg:grid-cols-3 gap-y-6 lg:gap-x-6 w-full">
         {projects.map((project, index) => (
           <Projectcard key={index} {...project} darkMode={darkMode} />
         ))}
       </div>
-      <a className="flex items-center mt-2 font-bold w-fit gap-x-2 group" href="#">
-        <div className={`px-2 py-1 transition rounded  ${darkMode ? "bg-white" : "bg-gray-900"}`}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="10"
-            height="22"
-            viewBox="0 0 12 24"
-            className={`${darkMode ? "text-black" : "text-white"}`}
-          >
-            <defs>
-              <path
-                id="SVG1pzpbdYY"
-                fill="currentColor"
-                d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"
-              />
-            </defs>
-            <use
-              fillRule="evenodd"
-              href="#SVG1pzpbdYY"
-              transform="rotate(-180 5.02 9.505)"
-            />
-          </svg>
-        </div>
-        <span className="group-hover:underline">See more</span>
-      </a>
     </div>
   );
 }

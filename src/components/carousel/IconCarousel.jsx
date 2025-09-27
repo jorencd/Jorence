@@ -13,10 +13,10 @@ const IconCarousel = ({ allTech }) => {
 
   const settings = {
     infinite: true, // Infinite loop
-    speed: 5000, // Transition speed
+    speed: 6000, // Transition speed
     autoplay: true, // Enable autoplay
     autoplaySpeed: 0, // Speed for autoplay (0 means no delay)
-    slidesToShow: 5, // Show 5 icons at a time
+    slidesToShow: 4, // Show 5 icons at a time
     slidesToScroll: 1, // Scroll one icon at a time
     cssEase: 'linear', // Smooth transition
     pauseOnHover: false, // Don't pause on hover
