@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Techstack from "../techstack/Techstack";
+import IconCarousel from "../carousel/IconCarousel"
+import { Icon } from "@iconify/react";
 
 function Skills({ darkMode }) {
   const [selected, setSelected] = useState(0);
@@ -7,10 +10,49 @@ function Skills({ darkMode }) {
     setSelected(index);
   };
 
+  // Data for Techstack in different categories
+  const frontEndTech = [
+    { svg: <Icon icon="logos:react" width="30" height="30" />, text: "React" },
+    { svg: <Icon icon="vscode-icons:file-type-html" width="30" height="30" />, text: "HTML" },
+    { svg: <Icon icon="devicon:css3" width="30" height="30" />, text: "CSS" },
+    { svg: <Icon icon="skill-icons:flutter-dark" width="30" height="30" />, text: "Flutter" },
+  ];
+
+  const backEndTech = [
+    { svg: <Icon icon="skill-icons:nodejs-dark" width="30" height="30" />, text: "Node.js" },
+    { svg: <Icon icon="material-icon-theme:php" width="30" height="30" />, text: "PHP" },
+    { svg: <Icon icon="skill-icons:mysql-dark" width="30" height="30" />, text: "MySQL" },
+    { svg: <Icon icon="skill-icons:postgresql-dark" width="30" height="30" />, text: "Postgre" },
+  ];
+
+  const toolsTech = [
+    { svg: <Icon icon="material-icon-theme:git" width="30" height="30" />, text: "Git" },
+    { svg: <Icon icon="flowbite:github-solid" width="30" height="30"  className="#000" />, text: "GitHub" },
+    { svg: <Icon icon="devicon:figma" width="30" height="30" />, text: "Figma" },
+    { svg: <Icon icon="skill-icons:supabase-dark" width="30" height="30" />, text: "Supabase" },
+    { svg: <Icon icon="vscode-icons:file-type-firebase" width="30" height="30" />, text: "Firebase" },
+  ];
+
+  const allTech = [
+    { svg: <Icon icon="uil:react" width="30" height="30"  className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="flowbite:html-solid" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="flowbite:css-solid" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="material-symbols:flutter" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="akar-icons:node-fill" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="akar-icons:php-fill" width="30" height="30"  className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="lineicons:mysql" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="carbon:database-postgresql" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="octicon:logo-github-16" width="84.38" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="solar:figma-bold-duotone" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="ri:supabase-fill" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="devicon-plain:firebase-wordmark" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+    { svg: <Icon icon="mdi:nodejs" width="30" height="30" className={`${darkMode ? "text-neutral-500" : "text-neutral-600"}`}/>},
+  ];
+
   return (
-    <div className="flex flex-col pt-4 gap-y-3 lg:gap-y-6 lg:pt-6">
+    <div className="flex flex-col pt-4 pb-4 gap-y-3 lg:gap-y-6 lg:pt-6">
       <h1 className="text-xl font-semibold lg:text-3xl">Tech Stack</h1>
-      <div className="mt-4 ">
+      <div className="mt-4">
         <ul className={`flex font-medium lg:gap-x-10 gap-x-5`}>
           <li
             className={`cursor-pointer ${selected === 0 ? "border-b-3 border-[#E3B555]" : ""}`}
@@ -34,34 +76,36 @@ function Skills({ darkMode }) {
       </div>
 
       {/* Conditionally render content based on the selected tab */}
-      <div className="">
+      <div className="w-full mt-6 lg:w-3/5">
         {selected === 0 && (
-          <div>
-            <h2 className="text-lg font-semibold">Front End</h2>
-            <p>
-              front end
-            </p>
+          <div className="grid grid-cols-4 gap-y-3 lg:grid-cols-4 lg:gap-y-6">
+            {frontEndTech.map((tech, index) => (
+              <Techstack darkMode={darkMode} key={index} svg={tech.svg} text={tech.text} />
+            ))}
           </div>
         )}
 
         {selected === 1 && (
           <div>
-            <h2 className="text-lg font-semibold">Back End</h2>
-            <p>
-              back end
-            </p>
+            <div className="grid grid-cols-4 gap-y-3 lg:grid-cols-4 lg:gap-y-6">
+              {backEndTech.map((tech, index) => (
+                <Techstack darkMode={darkMode} key={index} svg={tech.svg} text={tech.text} />
+              ))}
+            </div>
           </div>
         )}
 
         {selected === 2 && (
           <div>
-            <h2 className="text-lg font-semibold">Tools</h2>
-            <p>
-              tools
-            </p>
+            <div className="grid grid-cols-4 gap-y-3 lg:grid-cols-4 lg:gap-y-6">
+              {toolsTech.map((tech, index) => (
+                <Techstack darkMode={darkMode} key={index} svg={tech.svg} text={tech.text} />
+              ))}
+            </div>
           </div>
         )}
       </div>
+      <IconCarousel allTech={allTech} />
     </div>
   );
 }
