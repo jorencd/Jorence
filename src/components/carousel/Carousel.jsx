@@ -44,7 +44,7 @@ function Carousel({ darkMode }) {
       {isLoading ? (
         <div className="w-48 h-6 mb-4 bg-gray-300 rounded animate-pulse"></div>
       ) : (
-        <h2 className="mb-4 text-xl font-semibold">Service I Offer</h2>
+        <h2 className="mb-4 text-xl font-bold ">Service I Offer</h2>
       )}
 
       {/* Skeleton for the carousel */}

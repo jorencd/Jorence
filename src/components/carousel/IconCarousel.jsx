@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css'; 
 
 const IconCarousel = ({ allTech }) => {
-  // Combine all tech stacks into one array
+  
   const techStack = [...allTech];
 
   const settings = {
