@@ -214,27 +214,27 @@ function Skills({ darkMode }) {
       <h1 className="text-xl font-semibold text-center lg:text-3xl">
         Tech Stack
       </h1>
-      <div className={`flex justify-center pt-3 pb-1 mt-4 rounded ${darkMode ? "border-b border-t border-neutral-400" : "border-b border-t border-neutral-400"} `}>
-        <ul className={`flex font-medium lg:gap-x-10 gap-x-5 ${darkMode ? "text-neutral-400" : "text-neutral-700"}`}>
+      <div className={`flex justify-center mt-4 rounded ${darkMode ? "border-b border-t border-neutral-400" : "border-b border-t border-neutral-400"} `}>
+        <ul className={`flex justify-between w-full font-medium lg:gap-x-10 gap-x-5 ${darkMode ? "text-neutral-400" : "text-neutral-700"}`}>
           <li
-            className={`cursor-pointer ${
-              selected === 0 ? "border-b-3 border-[#E3B555]" : ""
+            className={`cursor-pointer text-center w-full p-2 ${
+              selected === 0 ? darkMode ? " bg-neutral-800" : "bg-neutral-300" : ""
             }`}
             onClick={() => handleClick(0)}
           >
             Front End
           </li>
           <li
-            className={`cursor-pointer ${
-              selected === 1 ? "border-b-3 border-[#E3B555]" : ""
+            className={`cursor-pointer text-center w-full p-2 ${
+              selected === 1 ? darkMode ? " bg-neutral-800" : "bg-neutral-300" : ""
             }`}
             onClick={() => handleClick(1)}
           >
             Back End
           </li>
           <li
-            className={`cursor-pointer ${
-              selected === 2 ? "border-b-3 border-[#E3B555]" : ""
+            className={`cursor-pointer text-center w-full p-2 ${
+              selected === 2 ? darkMode ? " bg-neutral-800" : "bg-neutral-300" : ""
             }`}
             onClick={() => handleClick(2)}
           >
@@ -246,7 +246,7 @@ function Skills({ darkMode }) {
       {/* Conditionally render content based on the selected tab */}
       <div className="items-center w-full mt-6">
         {selected === 0 && (
-          <div className="grid grid-cols-4 gap-y-3 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
+          <div className="grid grid-cols-4 gap-y-6 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
             {frontEndTech.map((tech, index) => (
               <Techstack
                 darkMode={darkMode}
@@ -260,7 +260,7 @@ function Skills({ darkMode }) {
 
         {selected === 1 && (
           <div>
-            <div className="grid grid-cols-4 gap-y-3 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
+            <div className="grid grid-cols-4 gap-y-6 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
               {backEndTech.map((tech, index) => (
                 <Techstack
                   darkMode={darkMode}
@@ -275,7 +275,7 @@ function Skills({ darkMode }) {
 
         {selected === 2 && (
           <div>
-            <div className="grid grid-cols-4 gap-y-3 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
+            <div className="grid grid-cols-4 gap-y-6 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
               {toolsTech.map((tech, index) => (
                 <Techstack
                   darkMode={darkMode}

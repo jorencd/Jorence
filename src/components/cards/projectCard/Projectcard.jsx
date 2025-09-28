@@ -29,7 +29,7 @@ function Projectcard({ image, title, description, link, darkMode }) {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-3 py-2 text-sm font-normal text-center rounded-lg"
+          className="inline-flex items-center py-2 text-sm font-normal text-center rounded-lg"
         >
           View Project
           <svg
