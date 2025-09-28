@@ -1,15 +1,19 @@
 import React from "react";
 import "./Projectcard.css";
 
-function Projectcard({ image, title, description, link , darkMode}) {
+function Projectcard({ image, title, description, link, darkMode }) {
   return (
-    <div className={`max-w-sm border rounded-lg shadow-sm z-1 ${
-            darkMode ? "bg-[#1f1f1f] text-[#b4b4b4] border-gray-600" : "bg-white text-gray-900 border-gray-300"
-          }`}>
+    <div
+      className={`max-w-sm border rounded-lg shadow-sm z-1 overflow-hidden ${
+        darkMode
+          ? "bg-[#1f1f1f] text-[#b4b4b4] border-gray-600" 
+          : "bg-white text-gray-900 border-gray-300"
+      } group`}
+    >
       {/* Image */}
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img
-          className="object-cover w-full h-40 rounded-t-lg"
+          className="object-cover w-full h-40 transition-all duration-300 group-hover:scale-110 group-hover:brightness-75"
           src={image}
           alt={title}
         />
@@ -18,20 +22,14 @@ function Projectcard({ image, title, description, link , darkMode}) {
       {/* Content */}
       <div className="p-5">
         <a href={link} target="_blank" rel="noopener noreferrer">
-          <h5 className="mb-2 text-2xl font-medium tracking-tight">
-            {title}
-          </h5>
+          <h5 className="mb-2 text-xl font-medium tracking-tight">{title}</h5>
         </a>
-        <p className="mb-3 text-xs font-normal lg:text-sm">
-          {description}
-        </p>
+        <p title={description}  className={`line-clamp-3 mb-3 text-xs font-normal lg:text-sm ${darkMode ? "text-neutral-500" : ""}`}>{description}</p>
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className={`inline-flex items-center px-3 py-2 text-sm font-normal text-center rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300 ${
-            darkMode ? "bg-[#dbdbdb] hover:bg-[#e3e3e3] text-gray-900 " : "bg-gray-800 text-white hover:bg-gray-700"
-          }`}
+          className="inline-flex items-center px-3 py-2 text-sm font-normal text-center rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
         >
           View Project
           <svg

@@ -1,40 +1,35 @@
 import Projectcard from "../cards/projectCard/Projectcard";
 
-import picture1 from "../../assets/projectPictures/Screenshot 2024-12-03 234840.png";
-import picture2 from "../../assets/projectPictures/Screenshot 2024-12-15 092329.png";
-import picture3 from "../../assets/projectPictures/Screenshot 2025-01-31 124715.png";
-import gradientImage1 from "../../assets/projectPictures/gradientblue.png";
-import gradientImage2 from "../../assets/projectPictures/Gradientvio.png";
-import gradientImage3 from "../../assets/projectPictures/gradientViolet.png";
+import picture1 from "../../assets/projectPictures/Interllux.png";
+import picture2 from "../../assets/projectPictures/Villa.png";
+import picture3 from "../../assets/projectPictures/School.png";
 
 function Project({ darkMode }) {
   // ✅ Project data array
   const projects = [
     {
       image: picture1,
-      gradient: gradientImage1,
-      title: "TaskFlow",
+      title: "E-Commerce Website",
       description:
-        "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-      link: "#",
+        "An online marketplace designed to provide a seamless shopping experience. The platform supports easy navigation, quick checkouts, and secure payment options.",
+      link: "https://interllux.vercel.app/",
     },
     {
       image: picture2,
-      gradient: gradientImage2,
-      title: "Finance Tracker",
+      title: "Reservation Website",
       description:
-        "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+        "A website built to manage reservations for events, restaurants, and accommodations. Features include real-time availability checks, booking confirmations, and calendar integration.",
       link: "#",
     },
     {
       image: picture3,
-      gradient: gradientImage3,
-      title: "Portfolio Website",
+      title: "Equipment Monitoring",
       description:
-        "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-      link: "#",
+        "A web application designed to monitor the status and performance of equipment in real-time. Provides insights on maintenance schedules, usage statistics, and efficiency metrics.",
+      link: "https://qc-system.vercel.app/",
     },
   ];
+
 
   return (
     <div className="flex flex-col pt-4 gap-y-3 lg:gap-y-4 lg:pt-6">
@@ -54,7 +49,7 @@ function Project({ darkMode }) {
       </p>
 
       {/* ✅ Auto-loop projects */}
-      <div className="text-[#2e2e2e] grid grid-cols-1 justify-items-center sm:grid-cols-2 sm:gap-x-4 md:grid-cols-2 lg:grid-cols-3 gap-y-6 lg:gap-x-6 w-full">
+      <div className="text-[#2e2e2e] mt-3 grid grid-cols-1 justify-items-center sm:grid-cols-2 sm:gap-x-4 md:grid-cols-2 lg:grid-cols-3 gap-y-6 lg:gap-x-6 w-full">
         {projects.map((project, index) => (
           <Projectcard key={index} {...project} darkMode={darkMode} />
         ))}
