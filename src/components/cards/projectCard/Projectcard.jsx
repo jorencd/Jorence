@@ -6,7 +6,7 @@ function Projectcard({ image, title, description, link, darkMode }) {
     <div
       className={`max-w-sm border rounded-lg shadow-sm z-1 overflow-hidden ${
         darkMode
-          ? "bg-[#1f1f1f] text-[#b4b4b4] border-gray-600" 
+          ? "bg-[#151B23] text-[#b4b4b4] border-gray-600" 
           : "bg-white text-gray-900 border-gray-300"
       } group`}
     >

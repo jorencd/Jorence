@@ -210,58 +210,47 @@ function Skills({ darkMode }) {
   ];
 
   return (
-    <div className="flex flex-col pt-4 pb-4 gap-y-3 lg:gap-y-6 lg:pt-6">
-      <h1 className="text-xl font-semibold text-center lg:text-3xl">
+    <div className="flex flex-col pt-4 pb-4 gap-y-6 lg:pt-6">
+      <h1 className="mt-10 text-xl font-semibold lg:text-3xl">
         Tech Stack
       </h1>
-      <div className={`flex justify-center mt-4 rounded ${darkMode ? "border-b border-t border-neutral-400" : "border-b border-t border-neutral-400"} `}>
-        <ul className={`flex justify-between w-full font-medium lg:gap-x-10 gap-x-5 ${darkMode ? "text-neutral-400" : "text-neutral-700"}`}>
-          <li
-            className={`cursor-pointer text-center w-full p-2 ${
-              selected === 0 ? darkMode ? " bg-neutral-800" : "bg-neutral-300" : ""
-            }`}
-            onClick={() => handleClick(0)}
-          >
-            Front End
-          </li>
-          <li
-            className={`cursor-pointer text-center w-full p-2 ${
-              selected === 1 ? darkMode ? " bg-neutral-800" : "bg-neutral-300" : ""
-            }`}
-            onClick={() => handleClick(1)}
-          >
-            Back End
-          </li>
-          <li
-            className={`cursor-pointer text-center w-full p-2 ${
-              selected === 2 ? darkMode ? " bg-neutral-800" : "bg-neutral-300" : ""
-            }`}
-            onClick={() => handleClick(2)}
-          >
-            Tools
-          </li>
-        </ul>
-      </div>
+      <div className={`flex flex-col px-4 pt-10 pb-20 rounded-xl backdrop-blur-lg ${
+        darkMode ? "bg-[#151B23] border-gray-800 border" : "bg-[#d4d4d449]"
+      }`}>
+        <div className={`flex justify-center mt-4 rounded ${darkMode ? "border-b border-t border-neutral-400" : "border-b border-t border-neutral-400"} `}>
+          <ul className={`flex justify-between w-full font-medium lg:gap-x-10 gap-x-5 ${darkMode ? "text-neutral-400" : "text-neutral-700"}`}>
+            <li
+              className={`cursor-pointer text-center w-full p-2 ${
+                selected === 0 ? darkMode ? " bg-[#1d242e]" : "bg-neutral-300" : ""
+              }`}
+              onClick={() => handleClick(0)}
+            >
+              Front End
+            </li>
+            <li
+              className={`cursor-pointer text-center w-full p-2 ${
+                selected === 1 ? darkMode ? " bg-[#1d242e]" : "bg-neutral-300" : ""
+              }`}
+              onClick={() => handleClick(1)}
+            >
+              Back End
+            </li>
+            <li
+              className={`cursor-pointer text-center w-full p-2 ${
+                selected === 2 ? darkMode ? " bg-[#1d242e]" : "bg-neutral-300" : ""
+              }`}
+              onClick={() => handleClick(2)}
+            >
+              Tools
+            </li>
+          </ul>
+        </div>
 
-      {/* Conditionally render content based on the selected tab */}
-      <div className="items-center w-full mt-6">
-        {selected === 0 && (
-          <div className="grid grid-cols-4 gap-y-5 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
-            {frontEndTech.map((tech, index) => (
-              <Techstack
-                darkMode={darkMode}
-                key={index}
-                svg={tech.svg}
-                text={tech.text}
-              />
-            ))}
-          </div>
-        )}
-
-        {selected === 1 && (
-          <div>
+        {/* Conditionally render content based on the selected tab */}
+        <div className="items-center w-full mt-6">
+          {selected === 0 && (
             <div className="grid grid-cols-4 gap-y-5 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
-              {backEndTech.map((tech, index) => (
+              {frontEndTech.map((tech, index) => (
                 <Techstack
                   darkMode={darkMode}
                   key={index}
@@ -270,25 +259,39 @@ function Skills({ darkMode }) {
                 />
               ))}
             </div>
-          </div>
-        )}
+          )}
 
-        {selected === 2 && (
-          <div>
-            <div className="grid grid-cols-4 gap-y-5 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
-              {toolsTech.map((tech, index) => (
-                <Techstack
-                  darkMode={darkMode}
-                  key={index}
-                  svg={tech.svg}
-                  text={tech.text}
-                />
-              ))}
+          {selected === 1 && (
+            <div>
+              <div className="grid grid-cols-4 gap-y-5 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
+                {backEndTech.map((tech, index) => (
+                  <Techstack
+                    darkMode={darkMode}
+                    key={index}
+                    svg={tech.svg}
+                    text={tech.text}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
 
+          {selected === 2 && (
+            <div>
+              <div className="grid grid-cols-4 gap-y-5 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
+                {toolsTech.map((tech, index) => (
+                  <Techstack
+                    darkMode={darkMode}
+                    key={index}
+                    svg={tech.svg}
+                    text={tech.text}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
       <IconCarousel allTech={allTech} />
     </div>
   );

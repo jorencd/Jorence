@@ -27,7 +27,7 @@ function App() {
     <div
       className={`flex flex-col min-h-screen ${
         darkMode
-          ? "bg-[#171717] text-[#dfdfdf] border-white"
+          ? "bg-[#0D1117] text-[#dfdfdf] border-white"
           : "bg-[#f5f5f5] text-[#1f1f1f]"
       }`}
     >

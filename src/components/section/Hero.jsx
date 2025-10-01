@@ -27,12 +27,12 @@ function Hero({ darkMode, setDarkMode }) {
 
   return (
     <div className="z-10 flex flex-row pt-15 sm:gap-x-2 md:gap-x-4 lg:gap-x-20">
-      <div className="flex flex-col w-4/5 gap-y-2">
+      <div className="flex flex-col w-4/5 gap-y-3">
         <h1 className="z-10 text-3xl font-bold sm:text-3xl md:text-3xl lg:text-5xl">
           Hi, I'm Jorence
         </h1>
         <p className="z-10 pr-2 text-sm lg:text-base md:text-m lg:pr-0">
-          Web & Game Developer | Digital Artist. I love creating interactive worlds, building for the web, and bringing ideas to life.
+          Web & Game Developer | Digital Artist. building for the web, and bringing ideas to life.
         </p>
         <Button darkMode={darkMode} setDarkMode={setDarkMode} />
       </div>
