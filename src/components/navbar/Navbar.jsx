@@ -6,24 +6,7 @@ function Navbar({ darkMode, setDarkMode }) {
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setShowNav(false);
-      } else {
-        setShowNav(true);
-      }
-      setLastScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
-
+  
   return (
     <div
       className={`nav fixed top-0 left-1/2 transform -translate-x-1/2 flex items-center w-full rounded px-8 py-2 md:px-6 transition-all duration-500 ease-in-out ${

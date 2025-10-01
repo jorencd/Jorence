@@ -246,7 +246,7 @@ function Skills({ darkMode }) {
       {/* Conditionally render content based on the selected tab */}
       <div className="items-center w-full mt-6">
         {selected === 0 && (
-          <div className="grid grid-cols-4 gap-y-6 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
+          <div className="grid grid-cols-4 gap-y-5 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
             {frontEndTech.map((tech, index) => (
               <Techstack
                 darkMode={darkMode}
@@ -260,7 +260,7 @@ function Skills({ darkMode }) {
 
         {selected === 1 && (
           <div>
-            <div className="grid grid-cols-4 gap-y-6 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
+            <div className="grid grid-cols-4 gap-y-5 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
               {backEndTech.map((tech, index) => (
                 <Techstack
                   darkMode={darkMode}
@@ -275,7 +275,7 @@ function Skills({ darkMode }) {
 
         {selected === 2 && (
           <div>
-            <div className="grid grid-cols-4 gap-y-6 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
+            <div className="grid grid-cols-4 gap-y-5 lg:grid-cols-8 lg:gap-y-6 justify-items-center">
               {toolsTech.map((tech, index) => (
                 <Techstack
                   darkMode={darkMode}
