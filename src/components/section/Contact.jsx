@@ -239,7 +239,7 @@ function Contact({ darkMode }) {
                       autofill:pt-6
                       autofill:pb-2 ${
                         darkMode
-                          ? "bg-neutral-800 text-neutral-500"
+                          ? "bg-[#151B23] text-neutral-500"
                           : "bg-neutral-300 text-neutral-800"
                       }`}
                     placeholder="Name"
@@ -276,7 +276,7 @@ function Contact({ darkMode }) {
                       autofill:pt-6
                       autofill:pb-2 ${
                         darkMode
-                          ? "bg-neutral-800"
+                          ? "bg-[#151B23]"
                           : "bg-neutral-300 text-neutral-900"
                       }`}
                     placeholder="Email"
@@ -312,7 +312,7 @@ function Contact({ darkMode }) {
                       autofill:pt-6
                       autofill:pb-2 ${
                         darkMode
-                          ? "bg-neutral-800 text-white"
+                          ? "bg-[#151B23] text-white"
                           : "bg-neutral-300 text-neutral-900"
                       }`}
                     placeholder="Message"
