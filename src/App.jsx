@@ -31,7 +31,7 @@ function App() {
           : "bg-[#f5f5f5] text-[#1f1f1f]"
       }`}
     >
-      <div className="flex flex-col justify-center px-10 pt-10 sm:px-28 md:px-40 lg:px-56 gap-y-15">
+      <div className="flex flex-col justify-center px-10 pt-10 sm:px-28 md:px-36 lg:px-36 gap-y-15">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
         <AnimateOnScroll>
@@ -40,13 +40,6 @@ function App() {
           </div>
         </AnimateOnScroll>
 
-        <div className="absolute bottom-0 z-0 w-full transform -translate-x-1/2 lg:top-60 md:bottom-0 sm:bottom-0 left-1/2">
-          <img
-            src={line}
-            alt="Line SVG"
-            className="z-0 object-contain w-full transition-all duration-300 ease-in-out"
-          />
-        </div>
 
         <AnimateOnScroll>
           <div className="z-50">

@@ -54,11 +54,16 @@ function Carousel({ darkMode }) {
         breakpoints={{
           640: {
             spaceBetween: 15,
-            slidesPerView: 2.5,
+            slidesPerView: 2.75,
+          },
+          768: {
+            // Medium screen size added here
+            spaceBetween: 16,
+            slidesPerView: 3.25,
           },
           1024: {
-            spaceBetween: 25,
-            slidesPerView: 3.25,
+            spaceBetween: 29,
+            slidesPerView: 3.75,
           },
         }}
       >

@@ -8,7 +8,7 @@ function Offercard({ title, description, index, darkMode }) {
     <div>
       <div
         className={`relative p-5 space-y-2 overflow-hidden border lg:w-64 lg:h-57 h-44 w-44 lg:p-9 lg:space-y-3 rounded-2xl ${
-          darkMode ? "bg-[#151B23] text-[#e4e4e4] border-gray-600" : "bg-white text-gray-900 border-gray-300"
+          darkMode ? "bg-[#151B23] text-[#e4e4e4] border-gray-800" : "bg-white text-gray-900 border-gray-300"
         }`}
       >
         <div className="w-16 h-16 lg:w-24 lg:h-24 bg-[#e3b655d8] rounded-full absolute -right-3 -top-4 lg:-right-5 lg:-top-7">
